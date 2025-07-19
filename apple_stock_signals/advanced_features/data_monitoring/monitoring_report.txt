@@ -1,0 +1,66 @@
+================================================================================
+📊 DATA QUALITY MONITORING DASHBOARD
+================================================================================
+Report Time: 2025-07-19 10:09:34
+
+🟢 SYSTEM HEALTH: HEALTHY (Score: 100/100)
+------------------------------------------------------------
+  api_status: ONLINE
+  data_freshness: CURRENT
+  disk_space: 54GB free (23.7%)
+  memory_usage: UNKNOWN
+  error_rate: 0 errors/hour
+
+
+📈 DATA QUALITY BY SYMBOL
+------------------------------------------------------------
+
+🟢 AAPL: 96/100
+  Last Update: 2025-07-18
+  Volatility: 15.2%
+  Avg Volume: 54,773,785
+  Warnings:
+    ⚠️ 4 days with high spread
+
+🟡 GOOGL: 87/100
+  Last Update: 2025-07-18
+  Volatility: 19.4%
+  Avg Volume: 42,279,995
+  Warnings:
+    ⚠️ 13 days with high spread
+
+🟢 MSFT: 99/100
+  Last Update: 2025-07-18
+  Volatility: 12.4%
+  Avg Volume: 19,763,200
+  Warnings:
+    ⚠️ 1 days with high spread
+
+🟡 TSLA: 81/100
+  Last Update: 2025-07-18
+  Volatility: 58.5%
+  Avg Volume: 100,861,610
+  Warnings:
+    ⚠️ 19 days with high spread
+
+🟡 UNH: 88/100
+  Last Update: 2025-07-18
+  Volatility: 34.9%
+  Avg Volume: 11,941,765
+  Warnings:
+    ⚠️ 12 days with high spread
+
+
+📊 OVERALL DATA QUALITY: 90.2/100
+
+
+🔄 DATA SOURCE VALIDATION
+------------------------------------------------------------
+✅ All data sources aligned
+
+
+💡 RECOMMENDATIONS
+------------------------------------------------------------
+✅ All systems operational - ready for trading
+
+================================================================================

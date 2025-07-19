@@ -1,0 +1,154 @@
+{
+  "AAPL": {
+    "symbol": "AAPL",
+    "total_trades": 3,
+    "winning_trades": 1,
+    "losing_trades": 2,
+    "win_rate": 33.33,
+    "profit_factor": 0.45,
+    "total_profit": -25.96,
+    "total_return_pct": -0.26,
+    "avg_win": 21.63,
+    "avg_loss": -23.8,
+    "avg_win_pct": 0.68,
+    "avg_loss_pct": -0.73,
+    "avg_holding_days": 6.0,
+    "avg_winning_rr": 0.24,
+    "max_drawdown_pct": 0.48,
+    "sharpe_ratio": -5.54,
+    "exit_reasons": {
+      "stop_loss": 2,
+      "technical_weakness": 1
+    },
+    "successful_patterns": {
+      "perfect_ema_alignment": 1,
+      "good_pullback": 1,
+      "rsi_momentum": 1,
+      "macd_accelerating": 1,
+      "higher_low": 1
+    },
+    "initial_capital": 10000,
+    "final_capital": 9974.04
+  },
+  "GOOGL": {
+    "symbol": "GOOGL",
+    "total_trades": 8,
+    "winning_trades": 4,
+    "losing_trades": 4,
+    "win_rate": 50.0,
+    "profit_factor": 3.64,
+    "total_profit": 598.66,
+    "total_return_pct": 5.99,
+    "avg_win": 206.4,
+    "avg_loss": -56.74,
+    "avg_win_pct": 6.27,
+    "avg_loss_pct": -1.66,
+    "avg_holding_days": 7.2,
+    "avg_winning_rr": 2.16,
+    "max_drawdown_pct": 1.8,
+    "sharpe_ratio": 5.64,
+    "exit_reasons": {
+      "max_days": 1,
+      "stop_loss": 5,
+      "technical_weakness": 1,
+      "momentum_loss": 1
+    },
+    "successful_patterns": {
+      "perfect_pullback": 4,
+      "fib_support": 4,
+      "perfect_ema_alignment": 3,
+      "rsi_momentum": 3,
+      "low_volatility": 3
+    },
+    "initial_capital": 10000,
+    "final_capital": 10598.66
+  },
+  "TSLA": {
+    "symbol": "TSLA",
+    "total_trades": 3,
+    "winning_trades": 0,
+    "losing_trades": 3,
+    "win_rate": 0.0,
+    "profit_factor": 0.0,
+    "total_profit": -291.31,
+    "total_return_pct": -2.91,
+    "avg_win": 0,
+    "avg_loss": -97.1,
+    "avg_win_pct": 0,
+    "avg_loss_pct": -3.37,
+    "avg_holding_days": 4.0,
+    "avg_winning_rr": 0,
+    "max_drawdown_pct": 2.91,
+    "sharpe_ratio": -43.2,
+    "exit_reasons": {
+      "technical_weakness": 1,
+      "stop_loss": 2
+    },
+    "successful_patterns": {},
+    "initial_capital": 10000,
+    "final_capital": 9708.69
+  },
+  "MSFT": {
+    "symbol": "MSFT",
+    "total_trades": 13,
+    "winning_trades": 6,
+    "losing_trades": 7,
+    "win_rate": 46.15,
+    "profit_factor": 1.42,
+    "total_profit": 113.48,
+    "total_return_pct": 1.13,
+    "avg_win": 64.04,
+    "avg_loss": -38.68,
+    "avg_win_pct": 1.97,
+    "avg_loss_pct": -1.28,
+    "avg_holding_days": 5.7,
+    "avg_winning_rr": 0.94,
+    "max_drawdown_pct": 1.06,
+    "sharpe_ratio": 1.94,
+    "exit_reasons": {
+      "momentum_loss": 4,
+      "stop_loss": 8,
+      "technical_weakness": 1
+    },
+    "successful_patterns": {
+      "perfect_pullback": 6,
+      "fib_support": 6,
+      "perfect_ema_alignment": 4,
+      "rsi_momentum": 4,
+      "higher_low": 4
+    },
+    "initial_capital": 10000,
+    "final_capital": 10113.48
+  },
+  "UNH": {
+    "symbol": "UNH",
+    "total_trades": 5,
+    "winning_trades": 2,
+    "losing_trades": 3,
+    "win_rate": 40.0,
+    "profit_factor": 0.27,
+    "total_profit": -164.53,
+    "total_return_pct": -1.65,
+    "avg_win": 30.95,
+    "avg_loss": -75.48,
+    "avg_win_pct": 1.01,
+    "avg_loss_pct": -2.57,
+    "avg_holding_days": 9.0,
+    "avg_winning_rr": 0.68,
+    "max_drawdown_pct": 2.25,
+    "sharpe_ratio": -9.59,
+    "exit_reasons": {
+      "momentum_loss": 1,
+      "stop_loss": 4
+    },
+    "successful_patterns": {
+      "perfect_ema_alignment": 2,
+      "perfect_pullback": 2,
+      "fib_support": 2,
+      "low_volatility": 2,
+      "rsi_momentum": 1
+    },
+    "initial_capital": 10000,
+    "final_capital": 9835.47
+  }
+}

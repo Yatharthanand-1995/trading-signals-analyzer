@@ -1,0 +1,70 @@
+======================================================================
+🧪 TRADING SYSTEM TEST REPORT
+======================================================================
+Test Date: 2025-07-19 09:54:39
+
+📊 TEST SUMMARY
+--------------------------------------------------
+Total Tests: 31
+Passed: 26 ✅
+Failed: 5 ❌
+Warnings: 0 ⚠️
+Success Rate: 83.9%
+
+🔴 SYSTEM STATUS: CRITICAL ISSUES DETECTED
+
+
+📋 DETAILED TEST RESULTS
+--------------------------------------------------
+✅ Package: pandas: PASS
+✅ Package: numpy: PASS
+✅ Package: yfinance: PASS
+✅ Package: scipy: PASS
+✅ Package: ta: PASS
+✅ Package: requests: PASS
+✅ Configuration: PASS
+   → Module loaded successfully
+❌ Data Fetcher: FAIL
+   → No module named 'config'
+❌ Technical Analyzer: FAIL
+   → No module named 'talib'
+✅ Sentiment Analyzer: PASS
+   → Module loaded successfully
+❌ Signal Generator: FAIL
+   → No module named 'config'
+✅ Historical Data Updater: PASS
+   → Module loaded successfully
+✅ Economic Calendar: PASS
+   → Module loaded successfully
+✅ Trade Journal: PASS
+   → Module loaded successfully
+✅ Risk Dashboard: PASS
+   → Module loaded successfully
+✅ Data Monitor: PASS
+   → Module loaded successfully
+❌ Integrated System: FAIL
+   → cannot import name 'RISK_PER_TRADE' from 'core_scripts.config' (/Users/yatharthanand/genai-assistant-vercel/trading-script/apple_stock_signals/core_scripts/config.py)
+✅ Directory: historical_data: PASS
+✅ Directory: outputs: PASS
+✅ Directory: backtest_results: PASS
+✅ Directory: advanced_features: PASS
+✅ Directory: core_scripts: PASS
+✅ Directory: data_modules: PASS
+✅ Directory: trading_systems: PASS
+✅ Data: AAPL: PASS
+✅ Data: GOOGL: PASS
+✅ Data: MSFT: PASS
+✅ Data: TSLA: PASS
+✅ Data: UNH: PASS
+✅ Yahoo Finance API: PASS
+❌ Signal Generation: FAIL
+   → No module named 'config'
+
+
+💡 RECOMMENDATIONS
+--------------------------------------------------
+• Fix critical failures before running the system
+• Check error messages for specific issues
+• Run 'pip install -r requirements.txt' to install missing packages
+
+======================================================================

@@ -1,0 +1,386 @@
+[
+  {
+    "timestamp": "2025-07-19T09:21:44.772923",
+    "system_health": {
+      "timestamp": "2025-07-19T09:21:42.501725",
+      "overall_health": "HEALTHY",
+      "health_score": 100,
+      "components": {
+        "api_status": "ONLINE",
+        "data_freshness": "CURRENT",
+        "disk_space": "53GB free (23.6%)",
+        "memory_usage": "UNKNOWN",
+        "error_rate": "0 errors/hour"
+      },
+      "alerts": []
+    },
+    "data_quality": [
+      {
+        "symbol": "AAPL",
+        "timestamp": "2025-07-19T09:21:43.290128",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      },
+      {
+        "symbol": "GOOGL",
+        "timestamp": "2025-07-19T09:21:43.521725",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      },
+      {
+        "symbol": "MSFT",
+        "timestamp": "2025-07-19T09:21:43.642674",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      },
+      {
+        "symbol": "TSLA",
+        "timestamp": "2025-07-19T09:21:43.804492",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      },
+      {
+        "symbol": "UNH",
+        "timestamp": "2025-07-19T09:21:43.925670",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      }
+    ],
+    "source_comparison": {
+      "timestamp": "2025-07-19T09:21:44.080235",
+      "discrepancies": [],
+      "source_status": {
+        "yfinance": "ONLINE"
+      }
+    },
+    "overall_quality_score": 0.0
+  },
+  {
+    "timestamp": "2025-07-19T09:23:21.720225",
+    "system_health": {
+      "timestamp": "2025-07-19T09:23:19.260568",
+      "overall_health": "HEALTHY",
+      "health_score": 100,
+      "components": {
+        "api_status": "ONLINE",
+        "data_freshness": "CURRENT",
+        "disk_space": "53GB free (23.6%)",
+        "memory_usage": "UNKNOWN",
+        "error_rate": "0 errors/hour"
+      },
+      "alerts": []
+    },
+    "data_quality": [
+      {
+        "symbol": "AAPL",
+        "timestamp": "2025-07-19T09:23:20.032517",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      },
+      {
+        "symbol": "GOOGL",
+        "timestamp": "2025-07-19T09:23:20.346198",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      },
+      {
+        "symbol": "MSFT",
+        "timestamp": "2025-07-19T09:23:20.494945",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      },
+      {
+        "symbol": "TSLA",
+        "timestamp": "2025-07-19T09:23:20.648425",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      },
+      {
+        "symbol": "UNH",
+        "timestamp": "2025-07-19T09:23:20.771560",
+        "quality_score": 0,
+        "issues": [
+          "Error: Cannot subtract tz-naive and tz-aware datetime-like objects."
+        ],
+        "warnings": [],
+        "data_stats": {}
+      }
+    ],
+    "source_comparison": {
+      "timestamp": "2025-07-19T09:23:20.933021",
+      "discrepancies": [],
+      "source_status": {
+        "yfinance": "ONLINE"
+      }
+    },
+    "overall_quality_score": 0.0
+  },
+  {
+    "timestamp": "2025-07-19T09:58:28.241765",
+    "system_health": {
+      "timestamp": "2025-07-19T09:58:25.720646",
+      "overall_health": "HEALTHY",
+      "health_score": 100,
+      "components": {
+        "api_status": "ONLINE",
+        "data_freshness": "CURRENT",
+        "disk_space": "53GB free (23.6%)",
+        "memory_usage": "UNKNOWN",
+        "error_rate": "0 errors/hour"
+      },
+      "alerts": []
+    },
+    "data_quality": [
+      {
+        "symbol": "AAPL",
+        "timestamp": "2025-07-19T09:58:26.778941",
+        "quality_score": 96.0,
+        "issues": [],
+        "warnings": [
+          "4 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "54,773,785",
+          "avg_daily_range": "1.83%",
+          "volatility": "15.2%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      },
+      {
+        "symbol": "GOOGL",
+        "timestamp": "2025-07-19T09:58:26.971307",
+        "quality_score": 87.0,
+        "issues": [],
+        "warnings": [
+          "13 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "42,279,995",
+          "avg_daily_range": "2.48%",
+          "volatility": "19.4%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      },
+      {
+        "symbol": "MSFT",
+        "timestamp": "2025-07-19T09:58:27.091806",
+        "quality_score": 99.0,
+        "issues": [],
+        "warnings": [
+          "1 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "19,763,200",
+          "avg_daily_range": "1.25%",
+          "volatility": "12.4%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      },
+      {
+        "symbol": "TSLA",
+        "timestamp": "2025-07-19T09:58:27.233896",
+        "quality_score": 81.0,
+        "issues": [],
+        "warnings": [
+          "19 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "100,861,610",
+          "avg_daily_range": "3.64%",
+          "volatility": "58.5%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      },
+      {
+        "symbol": "UNH",
+        "timestamp": "2025-07-19T09:58:27.352884",
+        "quality_score": 88.0,
+        "issues": [],
+        "warnings": [
+          "12 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "11,941,765",
+          "avg_daily_range": "2.45%",
+          "volatility": "34.9%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      }
+    ],
+    "source_comparison": {
+      "timestamp": "2025-07-19T09:58:27.514565",
+      "discrepancies": [],
+      "source_status": {
+        "yfinance": "ONLINE"
+      }
+    },
+    "overall_quality_score": 90.2
+  },
+  {
+    "timestamp": "2025-07-19T10:09:36.429389",
+    "system_health": {
+      "timestamp": "2025-07-19T10:09:34.022802",
+      "overall_health": "HEALTHY",
+      "health_score": 100,
+      "components": {
+        "api_status": "ONLINE",
+        "data_freshness": "CURRENT",
+        "disk_space": "54GB free (23.7%)",
+        "memory_usage": "UNKNOWN",
+        "error_rate": "0 errors/hour"
+      },
+      "alerts": []
+    },
+    "data_quality": [
+      {
+        "symbol": "AAPL",
+        "timestamp": "2025-07-19T10:09:34.945162",
+        "quality_score": 96.0,
+        "issues": [],
+        "warnings": [
+          "4 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "54,773,785",
+          "avg_daily_range": "1.83%",
+          "volatility": "15.2%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      },
+      {
+        "symbol": "GOOGL",
+        "timestamp": "2025-07-19T10:09:35.156738",
+        "quality_score": 87.0,
+        "issues": [],
+        "warnings": [
+          "13 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "42,279,995",
+          "avg_daily_range": "2.48%",
+          "volatility": "19.4%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      },
+      {
+        "symbol": "MSFT",
+        "timestamp": "2025-07-19T10:09:35.273480",
+        "quality_score": 99.0,
+        "issues": [],
+        "warnings": [
+          "1 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "19,763,200",
+          "avg_daily_range": "1.25%",
+          "volatility": "12.4%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      },
+      {
+        "symbol": "TSLA",
+        "timestamp": "2025-07-19T10:09:35.431818",
+        "quality_score": 81.0,
+        "issues": [],
+        "warnings": [
+          "19 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "100,861,610",
+          "avg_daily_range": "3.64%",
+          "volatility": "58.5%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      },
+      {
+        "symbol": "UNH",
+        "timestamp": "2025-07-19T10:09:35.551164",
+        "quality_score": 88.0,
+        "issues": [],
+        "warnings": [
+          "12 days with high spread"
+        ],
+        "data_stats": {
+          "last_update": "2025-07-18",
+          "days_of_data": 20,
+          "avg_volume": "11,941,765",
+          "avg_daily_range": "2.45%",
+          "volatility": "34.9%",
+          "missing_days": 1,
+          "anomaly_count": 0
+        }
+      }
+    ],
+    "source_comparison": {
+      "timestamp": "2025-07-19T10:09:35.715374",
+      "discrepancies": [],
+      "source_status": {
+        "yfinance": "ONLINE"
+      }
+    },
+    "overall_quality_score": 90.2
+  }
+]

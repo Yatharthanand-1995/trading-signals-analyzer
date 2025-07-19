@@ -1,0 +1,137 @@
+[
+  {
+    "entry_date": "2023-07-26",
+    "exit_date": "2023-08-01",
+    "holding_days": 6,
+    "entry_price": 264.35,
+    "exit_price": 261.07,
+    "profit_pct": -1.24,
+    "exit_reason": "weakness_exit"
+  },
+  {
+    "entry_date": "2023-08-03",
+    "exit_date": "2023-08-07",
+    "holding_days": 4,
+    "entry_price": 259.32,
+    "exit_price": 249.99,
+    "profit_pct": -3.6,
+    "exit_reason": "stop_loss"
+  },
+  {
+    "entry_date": "2023-08-28",
+    "exit_date": "2023-08-30",
+    "holding_days": 2,
+    "entry_price": 238.82,
+    "exit_price": 260.13,
+    "profit_pct": 8.92,
+    "exit_reason": "take_profit_1"
+  },
+  {
+    "entry_date": "2023-10-13",
+    "exit_date": "2023-10-18",
+    "holding_days": 5,
+    "entry_price": 251.12,
+    "exit_price": 242.13,
+    "profit_pct": -3.58,
+    "exit_reason": "stop_loss"
+  },
+  {
+    "entry_date": "2023-11-07",
+    "exit_date": "2023-11-09",
+    "holding_days": 2,
+    "entry_price": 222.18,
+    "exit_price": 209.98,
+    "profit_pct": -5.49,
+    "exit_reason": "weakness_exit"
+  },
+  {
+    "entry_date": "2023-12-04",
+    "exit_date": "2023-12-05",
+    "holding_days": 1,
+    "entry_price": 235.58,
+    "exit_price": 243.11,
+    "profit_pct": 3.2,
+    "exit_reason": "take_profit_1"
+  },
+  {
+    "entry_date": "2023-12-06",
+    "exit_date": "2023-12-13",
+    "holding_days": 7,
+    "entry_price": 239.37,
+    "exit_price": 230.94,
+    "profit_pct": -3.52,
+    "exit_reason": "stop_loss"
+  },
+  {
+    "entry_date": "2024-07-29",
+    "exit_date": "2024-07-31",
+    "holding_days": 2,
+    "entry_price": 232.1,
+    "exit_price": 232.07,
+    "profit_pct": -0.01,
+    "exit_reason": "weakness_exit"
+  },
+  {
+    "entry_date": "2024-09-03",
+    "exit_date": "2024-09-05",
+    "holding_days": 2,
+    "entry_price": 210.6,
+    "exit_price": 231.64,
+    "profit_pct": 9.99,
+    "exit_reason": "take_profit_2"
+  },
+  {
+    "entry_date": "2024-12-27",
+    "exit_date": "2024-12-31",
+    "holding_days": 4,
+    "entry_price": 431.66,
+    "exit_price": 414.58,
+    "profit_pct": -3.96,
+    "exit_reason": "stop_loss"
+  },
+  {
+    "entry_date": "2025-01-10",
+    "exit_date": "2025-01-15",
+    "holding_days": 5,
+    "entry_price": 394.74,
+    "exit_price": 428.41,
+    "profit_pct": 8.53,
+    "exit_reason": "take_profit_1"
+  },
+  {
+    "entry_date": "2025-01-28",
+    "exit_date": "2025-01-29",
+    "holding_days": 1,
+    "entry_price": 398.09,
+    "exit_price": 385.73,
+    "profit_pct": -3.11,
+    "exit_reason": "stop_loss"
+  },
+  {
+    "entry_date": "2025-01-30",
+    "exit_date": "2025-02-03",
+    "holding_days": 4,
+    "entry_price": 400.28,
+    "exit_price": 383.64,
+    "profit_pct": -4.16,
+    "exit_reason": "stop_loss"
+  },
+  {
+    "entry_date": "2025-02-04",
+    "exit_date": "2025-02-06",
+    "holding_days": 2,
+    "entry_price": 392.21,
+    "exit_price": 373.61,
+    "profit_pct": -4.74,
+    "exit_reason": "stop_loss"
+  },
+  {
+    "entry_date": "2025-03-20",
+    "exit_date": "2025-03-24",
+    "holding_days": 4,
+    "entry_price": 236.26,
+    "exit_price": 265.77,
+    "profit_pct": 12.49,
+    "exit_reason": "take_profit_1"
+  }
+]

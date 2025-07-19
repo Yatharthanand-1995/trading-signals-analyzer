@@ -1,0 +1,1 @@
+# Paper Trading module for safe strategy testing

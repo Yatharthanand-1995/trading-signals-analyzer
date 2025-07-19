@@ -1,0 +1,73 @@
+============================================================
+⚠️ RISK MANAGEMENT DASHBOARD
+============================================================
+Generated: 2025-07-19 09:24:15
+
+📊 PORTFOLIO OVERVIEW
+----------------------------------------
+Total Value: $60,662.50
+Position Count: 4
+Largest Position: AAPL (34.8%)
+
+🎯 RISK SCORES (0-100)
+----------------------------------------
+Concentration Risk: 28.4 [MEDIUM]
+Correlation Risk: 0.0 [LOW]
+Sector Risk: 1.2 [LOW]
+Overall Risk: 9.0 [LOW]
+
+📈 POSITION RISK ANALYSIS
+----------------------------------------
+
+AAPL:
+  Position Size: $21,118.00 (34.8%)
+  Unrealized P&L: $618.00 (+3.0%)
+  Risk Amount: $1,618.00
+
+GOOGL:
+  Position Size: $9,253.00 (15.3%)
+  Unrealized P&L: $253.00 (+2.8%)
+  Risk Amount: $703.00
+
+MSFT:
+  Position Size: $20,402.00 (33.6%)
+  Unrealized P&L: $402.00 (+2.0%)
+  Risk Amount: $1,402.00
+
+TSLA:
+  Position Size: $9,889.50 (16.3%)
+  Unrealized P&L: $289.50 (+3.0%)
+  Risk Amount: $1,189.50
+
+🔥 STRESS TEST RESULTS
+----------------------------------------
+
+Market Crash:
+  Portfolio Impact: -26.5%
+  Dollar Impact: $-16,045.39
+
+Tech Selloff:
+  Portfolio Impact: -13.4%
+  Dollar Impact: $-8,110.42
+
+Rate Hike:
+  Portfolio Impact: +0.0%
+  Dollar Impact: $0.00
+
+Black Swan:
+  Portfolio Impact: -46.3%
+  Dollar Impact: $-28,079.43
+
+🔥 RISK HEAT MAP
+----------------------------------------
+AAPL: █████ 52 [HIGH]
+MSFT: █████ 50 [HIGH]
+TSLA: ████ 43 [MEDIUM]
+GOOGL: ███ 37 [MEDIUM]
+
+⚠️ WARNINGS
+----------------------------------------
+⚠️ AAPL exceeds 25% of portfolio (34.8%)
+⚠️ MSFT exceeds 25% of portfolio (33.6%)
+⚠️ Technology - Hardware sector exceeds 30% (34.8%)
+⚠️ Technology - Software sector exceeds 30% (33.6%)

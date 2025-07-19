@@ -1,0 +1,59 @@
+[
+  {
+    "timestamp": "2025-07-19T16:47:22.341248",
+    "symbol": "UNH",
+    "action": "BUY",
+    "quantity": 11,
+    "price": 282.65,
+    "commission": 0,
+    "total_value": 3109.1499999999996,
+    "signal_data": {
+      "signal": "BUY",
+      "traditional_score": 45,
+      "ml_confidence": 65.14828638078392,
+      "combined_confidence": 65.14828638078392,
+      "stop_loss": 265.83,
+      "take_profit_1": 299.47
+    },
+    "cash_after": 6890.85,
+    "portfolio_value": 10000.0
+  },
+  {
+    "timestamp": "2025-07-19T16:48:45.760298",
+    "symbol": "UNH",
+    "action": "BUY",
+    "quantity": 11,
+    "price": 282.65,
+    "commission": 0,
+    "total_value": 3109.1499999999996,
+    "signal_data": {
+      "signal": "BUY",
+      "traditional_score": 45,
+      "ml_confidence": 65.14828638078392,
+      "combined_confidence": 65.14828638078392,
+      "stop_loss": 265.83,
+      "take_profit_1": 299.47
+    },
+    "cash_after": 3781.7000000000007,
+    "portfolio_value": 10000.0
+  },
+  {
+    "timestamp": "2025-07-19T16:50:01.131464",
+    "symbol": "UNH",
+    "action": "BUY",
+    "quantity": 11,
+    "price": 282.65,
+    "commission": 0,
+    "total_value": 3109.1499999999996,
+    "signal_data": {
+      "signal": "BUY",
+      "traditional_score": 45,
+      "ml_confidence": 65.14828638078392,
+      "combined_confidence": 65.14828638078392,
+      "stop_loss": 265.83,
+      "take_profit_1": 299.47
+    },
+    "cash_after": 672.5500000000011,
+    "portfolio_value": 10000.0
+  }
+]
