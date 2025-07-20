@@ -16,16 +16,19 @@ import sys
 # Add parent directory to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Import our new modules
-from core.multi_timeframe_analyzer import MultiTimeframeAnalyzer
-from core.volume_analyzer import VolumeAnalyzer
-from core.entry_filter_system import EntryFilterSystem
+# Import our modules
+from .multi_timeframe import MultiTimeframeAnalyzer
+from .volume_analyzer import VolumeAnalyzer
+from .entry_filters import EntryFilterSystem
 
 # Import existing modules
 try:
-    from core.utils.technical_analyzer import AppleTechnicalAnalyzer
+    from ..indicators.technical_wrapper import TechnicalAnalyzer
 except ImportError:
-    from core.indicators.technical_wrapper import AppleTechnicalAnalyzer
+    # Fallback for testing or if technical wrapper is not available
+    class TechnicalAnalyzer:
+        def __init__(self):
+            pass
 
 class SwingTradingAnalyzer:
     """
@@ -37,7 +40,7 @@ class SwingTradingAnalyzer:
         self.mtf_analyzer = MultiTimeframeAnalyzer()
         self.volume_analyzer = VolumeAnalyzer()
         self.filter_system = EntryFilterSystem()
-        self.tech_analyzer = AppleTechnicalAnalyzer()
+        self.tech_analyzer = TechnicalAnalyzer()
         
         # Configuration
         self.config = {
