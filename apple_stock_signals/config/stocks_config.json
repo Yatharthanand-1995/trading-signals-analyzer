@@ -9,7 +9,7 @@
         "TSLA",
         "UNH"
       ],
-      "active": true
+      "active": false
     },
     "top_10": {
       "name": "Top 10 US Stocks",
@@ -81,7 +81,7 @@
         "UPS",
         "AMGN"
       ],
-      "active": false
+      "active": true
     },
     "tech_sector": {
       "name": "Technology Sector Focus",

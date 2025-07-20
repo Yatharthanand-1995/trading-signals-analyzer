@@ -11,11 +11,17 @@ class AppleTechnicalAnalyzer:
         """Calculate all technical indicators and display them"""
         print("\n🔧 Calculating Technical Indicators...")
         
-        df = stock_data['historical_data']
-        close = df['Close'].values
-        high = df['High'].values
-        low = df['Low'].values
-        volume = df['Volume'].values
+        # Handle both DataFrame and dict input
+        if isinstance(stock_data, dict) and 'historical_data' in stock_data:
+            df = stock_data['historical_data']
+        elif isinstance(stock_data, pd.DataFrame):
+            df = stock_data
+        else:
+            df = stock_data
+        close = df['Close'].values.astype(np.float64)
+        high = df['High'].values.astype(np.float64)
+        low = df['Low'].values.astype(np.float64)
+        volume = df['Volume'].values.astype(np.float64)
         
         # Calculate indicators
         indicators = {}
@@ -69,7 +75,14 @@ class AppleTechnicalAnalyzer:
         
         # Add current price and volume data
         indicators['current_price'] = close[-1]
-        indicators['volume_ratio'] = stock_data['volume_ratio']
+        # Calculate volume ratio if not provided
+        if isinstance(stock_data, dict) and 'volume_ratio' in stock_data:
+            indicators['volume_ratio'] = stock_data['volume_ratio']
+        else:
+            # Calculate it from the data
+            volume_avg = df['Volume'].rolling(window=20).mean().iloc[-1]
+            current_volume = df['Volume'].iloc[-1]
+            indicators['volume_ratio'] = current_volume / volume_avg if volume_avg > 0 else 1.0
         
         # Display calculated indicators
         self.display_technical_indicators(indicators)

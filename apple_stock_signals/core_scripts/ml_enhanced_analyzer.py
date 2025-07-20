@@ -232,6 +232,11 @@ def run_ml_enhanced_analysis(paper_trading=True):
 if __name__ == "__main__":
     # Check command line arguments
     import argparse
+    import sys
+    
+    # Add parent directory to path
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from utils.validators import Validators, ValidationError
     
     parser = argparse.ArgumentParser(description='ML-Enhanced Trading Analysis')
     parser.add_argument('--live', action='store_true', help='Run in live mode (no paper trading)')
@@ -239,6 +244,14 @@ if __name__ == "__main__":
     parser.add_argument('--train', action='store_true', help='Train ML model first')
     
     args = parser.parse_args()
+    
+    # Validate symbol if provided
+    if args.symbol:
+        try:
+            args.symbol = Validators.validate_stock_symbol(args.symbol, allow_lowercase=True)
+        except ValidationError as e:
+            print(f"❌ Error: {e}")
+            sys.exit(1)
     
     # Train model if requested
     if args.train:

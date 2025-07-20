@@ -1,0 +1,352 @@
+{
+  "TSLA": {
+    "total_return": 0.19962061866583025,
+    "annualized_return": 0.0960696099868601,
+    "sharpe_ratio": 0.45921908380869114,
+    "max_drawdown": -0.537656801185852,
+    "win_rate": 0.442
+  },
+  "BRK-B": {
+    "total_return": 0.17179562316524644,
+    "annualized_return": 0.08318177259217796,
+    "sharpe_ratio": 0.5805273380369176,
+    "max_drawdown": -0.1290662921186968,
+    "win_rate": 0.472
+  },
+  "AMZN": {
+    "total_return": -0.05700268227989502,
+    "annualized_return": -0.029147461421416665,
+    "sharpe_ratio": 0.0483740260704422,
+    "max_drawdown": -0.3087663843187606,
+    "win_rate": 0.454
+  },
+  "MSFT": {
+    "total_return": -0.06041265963602027,
+    "annualized_return": -0.03091844627172957,
+    "sharpe_ratio": -0.03439238544283342,
+    "max_drawdown": -0.23726644477525438,
+    "win_rate": 0.446
+  },
+  "JPM": {
+    "total_return": -0.0013991642818825811,
+    "annualized_return": -0.0007054236608683428,
+    "sharpe_ratio": 0.11169131341249593,
+    "max_drawdown": -0.24423926032764975,
+    "win_rate": 0.49
+  },
+  "GOOGL": {
+    "total_return": 0.009122537070041181,
+    "annualized_return": 0.00458740381551026,
+    "sharpe_ratio": 0.16019928359308996,
+    "max_drawdown": -0.2980586991028076,
+    "win_rate": 0.464
+  },
+  "AAPL": {
+    "total_return": -0.2381246687989026,
+    "annualized_return": -0.12809435080373632,
+    "sharpe_ratio": -0.38141388773522034,
+    "max_drawdown": -0.3336051881496732,
+    "win_rate": 0.468
+  },
+  "NVDA": {
+    "total_return": 0.9973709445048002,
+    "annualized_return": 0.41720018023169936,
+    "sharpe_ratio": 0.9446810744043739,
+    "max_drawdown": -0.3688102584874191,
+    "win_rate": 0.462
+  },
+  "JNJ": {
+    "total_return": 0.004217067780107664,
+    "annualized_return": 0.002123184007979617,
+    "sharpe_ratio": 0.09698938700466055,
+    "max_drawdown": -0.15946145569825965,
+    "win_rate": 0.452
+  },
+  "V": {
+    "total_return": 0.20095135308600853,
+    "annualized_return": 0.09668223780660501,
+    "sharpe_ratio": 0.5906846153647097,
+    "max_drawdown": -0.15009234697854934,
+    "win_rate": 0.486
+  },
+  "WMT": {
+    "total_return": 0.08884884354695965,
+    "annualized_return": 0.043834549895598096,
+    "sharpe_ratio": 0.3124352220108427,
+    "max_drawdown": -0.21928028075921324,
+    "win_rate": 0.47
+  },
+  "HD": {
+    "total_return": -0.12558766920753683,
+    "annualized_return": -0.06540166765442834,
+    "sharpe_ratio": -0.2261662432489479,
+    "max_drawdown": -0.21791629848175886,
+    "win_rate": 0.44
+  },
+  "DIS": {
+    "total_return": 0.5294523633521413,
+    "annualized_return": 0.23881404717901633,
+    "sharpe_ratio": 0.9168426958819238,
+    "max_drawdown": -0.32860454868783007,
+    "win_rate": 0.458
+  },
+  "ADBE": {
+    "total_return": -0.45858672126659783,
+    "annualized_return": -0.2659957624999282,
+    "sharpe_ratio": -0.7704999191937754,
+    "max_drawdown": -0.46436449245512557,
+    "win_rate": 0.464
+  },
+  "CVX": {
+    "total_return": -0.3613858678188907,
+    "annualized_return": -0.20229885283718052,
+    "sharpe_ratio": -0.9112231832964434,
+    "max_drawdown": -0.20639724186905972,
+    "win_rate": 0.432
+  },
+  "CRM": {
+    "total_return": 0.32423774356568336,
+    "annualized_return": 0.15204871768302453,
+    "sharpe_ratio": 0.5949580215891912,
+    "max_drawdown": -0.3560192353323052,
+    "win_rate": 0.444
+  },
+  "ABBV": {
+    "total_return": -0.2333527449574212,
+    "annualized_return": -0.12534622507068127,
+    "sharpe_ratio": -0.46219188595246796,
+    "max_drawdown": -0.20736389773350428,
+    "win_rate": 0.44
+  },
+  "PG": {
+    "total_return": -0.23278945966188047,
+    "annualized_return": -0.1250223925747207,
+    "sharpe_ratio": -0.7412828406334407,
+    "max_drawdown": -0.1398525591059241,
+    "win_rate": 0.424
+  },
+  "KO": {
+    "total_return": 0.22617791150598476,
+    "annualized_return": 0.10823269406877012,
+    "sharpe_ratio": 0.7679909514844642,
+    "max_drawdown": -0.16263941649296942,
+    "win_rate": 0.474
+  },
+  "PEP": {
+    "total_return": -0.1747387222964375,
+    "annualized_return": -0.0922586903504945,
+    "sharpe_ratio": -0.43048040305756985,
+    "max_drawdown": -0.2917370103965822,
+    "win_rate": 0.42
+  },
+  "TMO": {
+    "total_return": -0.003178107718571632,
+    "annualized_return": -0.0016030307601933025,
+    "sharpe_ratio": 0.11379136926847155,
+    "max_drawdown": -0.372752550183563,
+    "win_rate": 0.442
+  },
+  "COST": {
+    "total_return": -0.3400464184194759,
+    "annualized_return": -0.18897405320482574,
+    "sharpe_ratio": -0.9476076524848739,
+    "max_drawdown": -0.17294723885769137,
+    "win_rate": 0.454
+  },
+  "UNH": {
+    "total_return": -0.45514698720043,
+    "annualized_return": -0.26364914441084764,
+    "sharpe_ratio": -0.7074646625432055,
+    "max_drawdown": -0.5576501635001014,
+    "win_rate": 0.436
+  },
+  "XOM": {
+    "total_return": -0.2627595444064894,
+    "annualized_return": -0.14241926551656126,
+    "sharpe_ratio": -0.612987863951596,
+    "max_drawdown": -0.18918135967355065,
+    "win_rate": 0.434
+  },
+  "NFLX": {
+    "total_return": 0.019580560897664023,
+    "annualized_return": 0.009821143240040797,
+    "sharpe_ratio": 0.19221981805455793,
+    "max_drawdown": -0.2284255859575064,
+    "win_rate": 0.448
+  },
+  "CSCO": {
+    "total_return": 0.3336137524959093,
+    "annualized_return": 0.15615258075672078,
+    "sharpe_ratio": 0.8166149243984794,
+    "max_drawdown": -0.20164156415428935,
+    "win_rate": 0.46
+  },
+  "ACN": {
+    "total_return": -0.07854165500569843,
+    "annualized_return": -0.04038780915962348,
+    "sharpe_ratio": -0.0509680683253858,
+    "max_drawdown": -0.30335473572603955,
+    "win_rate": 0.456
+  },
+  "BAC": {
+    "total_return": 0.10471991873717812,
+    "annualized_return": 0.05147536259169305,
+    "sharpe_ratio": 0.323593034169642,
+    "max_drawdown": -0.2750937342150207,
+    "win_rate": 0.426
+  },
+  "MRK": {
+    "total_return": 0.2109215007167331,
+    "annualized_return": 0.10126150657497557,
+    "sharpe_ratio": 0.5360082550514159,
+    "max_drawdown": -0.4344339759185941,
+    "win_rate": 0.466
+  },
+  "AVGO": {
+    "total_return": -0.18543173824534243,
+    "annualized_return": -0.0982057699961908,
+    "sharpe_ratio": 0.05429819143403118,
+    "max_drawdown": -0.411496782466929,
+    "win_rate": 0.462
+  },
+  "LLY": {
+    "total_return": -0.23743133720901144,
+    "annualized_return": -0.12769453576782863,
+    "sharpe_ratio": -0.25363454189782136,
+    "max_drawdown": -0.25252389465067426,
+    "win_rate": 0.472
+  },
+  "META": {
+    "total_return": -0.022190949093861323,
+    "annualized_return": -0.011246479876420135,
+    "sharpe_ratio": 0.14251102775616079,
+    "max_drawdown": -0.3415081130072274,
+    "win_rate": 0.47
+  },
+  "DHR": {
+    "total_return": -0.4651153153970089,
+    "annualized_return": -0.27047005664337465,
+    "sharpe_ratio": -1.0828344117256583,
+    "max_drawdown": -0.37568856029434516,
+    "win_rate": 0.432
+  },
+  "CMCSA": {
+    "total_return": -0.08228028835814616,
+    "annualized_return": -0.04235207886660963,
+    "sharpe_ratio": -0.05496410885846394,
+    "max_drawdown": -0.26828257397149613,
+    "win_rate": 0.448
+  },
+  "VZ": {
+    "total_return": -0.3499840242323904,
+    "annualized_return": -0.19515229234515385,
+    "sharpe_ratio": -0.9138935034090987,
+    "max_drawdown": -0.135574202198667,
+    "win_rate": 0.464
+  },
+  "INTC": {
+    "total_return": -0.6333528438744492,
+    "annualized_return": -0.39691135215379225,
+    "sharpe_ratio": -0.7180067044971631,
+    "max_drawdown": -0.6380454883388952,
+    "win_rate": 0.44
+  },
+  "MA": {
+    "total_return": 0.03891969081992763,
+    "annualized_return": 0.019429781140922975,
+    "sharpe_ratio": 0.1964512235584995,
+    "max_drawdown": -0.16725375301182044,
+    "win_rate": 0.474
+  },
+  "ABT": {
+    "total_return": -0.1610862099569409,
+    "annualized_return": -0.08472092008021048,
+    "sharpe_ratio": -0.35278123402951306,
+    "max_drawdown": -0.2087832622863005,
+    "win_rate": 0.46
+  },
+  "WFC": {
+    "total_return": -0.10710859950874396,
+    "annualized_return": -0.055498798572401475,
+    "sharpe_ratio": -0.06464058755679436,
+    "max_drawdown": -0.24734626014651317,
+    "win_rate": 0.46
+  },
+  "PM": {
+    "total_return": 0.08835457910229216,
+    "annualized_return": 0.04359571219622227,
+    "sharpe_ratio": 0.31127712084209835,
+    "max_drawdown": -0.1117526774081582,
+    "win_rate": 0.49
+  },
+  "TXN": {
+    "total_return": -0.3964573361769804,
+    "annualized_return": -0.2246874399662926,
+    "sharpe_ratio": -0.6533151852359619,
+    "max_drawdown": -0.3341196730125576,
+    "win_rate": 0.432
+  },
+  "PFE": {
+    "total_return": -0.1724838915919117,
+    "annualized_return": -0.09100952154397446,
+    "sharpe_ratio": -0.2891441462420516,
+    "max_drawdown": -0.3637581003219852,
+    "win_rate": 0.408
+  },
+  "NEE": {
+    "total_return": -0.0445893157581182,
+    "annualized_return": -0.022727209495884693,
+    "sharpe_ratio": 0.05762847391870104,
+    "max_drawdown": -0.3456958536520546,
+    "win_rate": 0.456
+  },
+  "QCOM": {
+    "total_return": 0.17136428907404433,
+    "annualized_return": 0.08298080156871923,
+    "sharpe_ratio": 0.40256193292734127,
+    "max_drawdown": -0.4423405717245952,
+    "win_rate": 0.48
+  },
+  "UNP": {
+    "total_return": -0.08883672558768085,
+    "annualized_return": -0.04580642454936279,
+    "sharpe_ratio": -0.13364001911103787,
+    "max_drawdown": -0.17754140562554543,
+    "win_rate": 0.456
+  },
+  "RTX": {
+    "total_return": -0.23991987913323776,
+    "annualized_return": -0.12913041213776022,
+    "sharpe_ratio": -0.5134447843642359,
+    "max_drawdown": -0.27982538066008167,
+    "win_rate": 0.46
+  },
+  "BMY": {
+    "total_return": -0.06506751275185474,
+    "annualized_return": -0.0333411163067332,
+    "sharpe_ratio": 0.0051114318705218036,
+    "max_drawdown": -0.36022852265555916,
+    "win_rate": 0.438
+  },
+  "HON": {
+    "total_return": -0.01138332683014076,
+    "annualized_return": -0.005753485799352864,
+    "sharpe_ratio": 0.07100701919538423,
+    "max_drawdown": -0.2210227546684762,
+    "win_rate": 0.436
+  },
+  "AMGN": {
+    "total_return": -0.01929599215086497,
+    "annualized_return": -0.009772172255364309,
+    "sharpe_ratio": 0.08503536833268739,
+    "max_drawdown": -0.22740554167382598,
+    "win_rate": 0.45
+  },
+  "UPS": {
+    "total_return": -0.13781364544919827,
+    "annualized_return": -0.07201068189726822,
+    "sharpe_ratio": -0.13517914950589865,
+    "max_drawdown": -0.47024869226125976,
+    "win_rate": 0.422
+  }
+}

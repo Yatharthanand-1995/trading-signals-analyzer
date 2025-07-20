@@ -5,7 +5,25 @@ from newsapi import NewsApiClient
 import requests
 from datetime import datetime, timedelta
 import json
+import logging
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Dict, Any, List, Optional
+
 from core_scripts.config import API_KEYS, VERIFICATION_SETTINGS
+from utils.error_handler import (
+    retry_with_backoff, 
+    handle_api_errors, 
+    rate_limited,
+    safe_request,
+    RetryConfig,
+    RateLimiter
+)
+from utils.cache_manager import cached, get_cached_or_fetch, CACHE_CONFIGS
+from utils.parallel_processor import ParallelProcessor, run_async_fetch
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 class AppleDataFetcher:
     def __init__(self):
@@ -18,81 +36,105 @@ class AppleDataFetcher:
         self.symbol = "AAPL"
         
     def fetch_all_data(self):
-        """Fetch all AAPL data and display it"""
+        """Fetch all AAPL data using parallel processing"""
         print("🔄 Fetching Apple Stock Data...")
+        start_time = time.time()
         
-        # Get stock data
-        stock_data = self.fetch_stock_data()
+        # Use parallel processing for independent data fetches
+        with ParallelProcessor(max_workers=5) as processor:
+            # Submit all tasks
+            futures = {
+                processor.executor.submit(self.fetch_stock_data): 'stock_data',
+                processor.executor.submit(self.fetch_news_sentiment): 'news_data',
+                processor.executor.submit(self.fetch_social_sentiment): 'social_data',
+                processor.executor.submit(self.fetch_fundamental_data): 'fundamental_data'
+            }
+            
+            # Collect results
+            results = {}
+            for future in as_completed(futures):
+                data_type = futures[future]
+                try:
+                    results[data_type] = future.result()
+                except Exception as e:
+                    logger.error(f"Failed to fetch {data_type}: {e}")
+                    results[data_type] = None
         
-        # Verify data accuracy
-        verification_results = self.verify_data_accuracy(stock_data)
+        # Verify data accuracy (depends on stock_data)
+        if results.get('stock_data'):
+            verification_results = self.verify_data_accuracy(results['stock_data'])
+        else:
+            verification_results = None
         
-        # Get news sentiment
-        news_data = self.fetch_news_sentiment()
-        
-        # Get social sentiment
-        social_data = self.fetch_social_sentiment()
-        
-        # Get fundamental data
-        fundamental_data = self.fetch_fundamental_data()
+        fetch_time = time.time() - start_time
+        print(f"⚡ Data fetched in {fetch_time:.2f} seconds")
         
         # Display all fetched data
-        self.display_fetched_data(stock_data, news_data, social_data, fundamental_data)
+        self.display_fetched_data(
+            results.get('stock_data'), 
+            results.get('news_data'), 
+            results.get('social_data'), 
+            results.get('fundamental_data')
+        )
         
         # Display verification results
         self.display_verification_results(verification_results)
         
         return {
-            'stock_data': stock_data,
-            'news_data': news_data,
-            'social_data': social_data,
-            'fundamental_data': fundamental_data,
+            'stock_data': results.get('stock_data'),
+            'news_data': results.get('news_data'),
+            'social_data': results.get('social_data'),
+            'fundamental_data': results.get('fundamental_data'),
             'verification_results': verification_results
         }
     
+    @cached(ttl=CACHE_CONFIGS['stock_quotes']['ttl'], key_prefix='stock')
+    @retry_with_backoff(RetryConfig(max_retries=3, initial_delay=1.0))
+    @handle_api_errors(default_return=None, log_errors=True)
     def fetch_stock_data(self):
-        """Fetch AAPL stock price data"""
-        try:
-            ticker = yf.Ticker(self.symbol)
-            
-            # Get historical data (1 year)
-            hist = ticker.history(period="1y")
-            
-            # Get real-time info
-            info = ticker.info
-            
-            # Get current price
-            current_price = hist['Close'].iloc[-1]
-            
-            # Calculate additional metrics
-            volume_avg = hist['Volume'].rolling(window=20).mean().iloc[-1]
-            volume_current = hist['Volume'].iloc[-1]
-            volume_ratio = volume_current / volume_avg if volume_avg > 0 else 1.0
-            
-            # Get options data
-            options_data = self.fetch_options_data(ticker)
-            
-            return {
-                'historical_data': hist,
-                'current_price': current_price,
-                'volume_ratio': volume_ratio,
-                'company_info': info,
-                'options_data': options_data
-            }
-            
-        except Exception as e:
-            print(f"Error fetching stock data: {e}")
-            return None
+        """Fetch AAPL stock price data with caching and retry logic"""
+        ticker = yf.Ticker(self.symbol)
+        
+        # Get historical data (1 year)
+        hist = ticker.history(period="1y")
+        
+        if hist.empty:
+            raise ValueError("No historical data returned from yfinance")
+        
+        # Get real-time info
+        info = ticker.info
+        
+        # Get current price
+        current_price = hist['Close'].iloc[-1]
+        
+        # Calculate additional metrics
+        volume_avg = hist['Volume'].rolling(window=20).mean().iloc[-1]
+        volume_current = hist['Volume'].iloc[-1]
+        volume_ratio = volume_current / volume_avg if volume_avg > 0 else 1.0
+        
+        # Get options data
+        options_data = self.fetch_options_data(ticker)
+        
+        return {
+            'historical_data': hist,
+            'current_price': current_price,
+            'volume_ratio': volume_ratio,
+            'company_info': info,
+            'options_data': options_data
+        }
     
+    @cached(ttl=CACHE_CONFIGS['news_data']['ttl'], key_prefix='news')
+    @retry_with_backoff(RetryConfig(max_retries=2, initial_delay=2.0))
+    @rate_limited(calls_per_second=2.0)  # NewsAPI rate limiting
     def fetch_news_sentiment(self):
-        """Fetch Apple news and analyze sentiment"""
+        """Fetch Apple news and analyze sentiment with caching and retry logic"""
+        print("📰 Fetching Apple news...")
+        
+        if not self.news_api:
+            print("⚠️ News API key not configured - using mock data")
+            return self.get_mock_news_data()
+        
         try:
-            print("📰 Fetching Apple news...")
-            
-            if not self.news_api:
-                print("⚠️ News API key not configured - using mock data")
-                return self.get_mock_news_data()
-            
             # Get news from last 7 days
             news = self.news_api.get_everything(
                 q="Apple stock OR AAPL",
@@ -102,7 +144,7 @@ class AppleDataFetcher:
                 page_size=50
             )
             
-            articles = news['articles']
+            articles = news.get('articles', [])
             
             # Analyze sentiment for each article
             sentiment_scores = []
@@ -137,9 +179,8 @@ class AppleDataFetcher:
                 'negative_count': negative_count,
                 'neutral_count': len(sentiment_scores) - positive_count - negative_count
             }
-            
         except Exception as e:
-            print(f"Error fetching news: {e}")
+            logger.warning(f"News API failed, falling back to mock data: {e}")
             return self.get_mock_news_data()
     
     def get_mock_news_data(self):
@@ -168,13 +209,17 @@ class AppleDataFetcher:
             'neutral_count': 3
         }
     
+    @cached(ttl=CACHE_CONFIGS['news_data']['ttl'], key_prefix='social')
     def fetch_social_sentiment(self):
-        """Fetch Apple social media sentiment"""
+        """Fetch Apple social media sentiment with caching"""
         try:
             print("💬 Fetching social media sentiment...")
             
-            # Reddit sentiment
-            reddit_data = self.fetch_reddit_sentiment()
+            # Fetch Reddit data with caching
+            reddit_data = get_cached_or_fetch(
+                'news_data',
+                self.fetch_reddit_sentiment
+            )
             
             # Twitter sentiment (simplified - would need Twitter API)
             twitter_data = {'avg_sentiment': 50, 'post_count': 0}  # Placeholder
@@ -195,59 +240,70 @@ class AppleDataFetcher:
             print(f"Error fetching social sentiment: {e}")
             return {'combined_sentiment': 50}
     
+    @retry_with_backoff(RetryConfig(max_retries=3, initial_delay=1.0, exponential_base=2.0))
+    @rate_limited(calls_per_second=0.5)  # Reddit is strict with rate limits
     def fetch_reddit_sentiment(self):
-        """Fetch Reddit sentiment for Apple"""
-        try:
-            headers = {'User-Agent': 'AppleStockAnalyzer/1.0'}
-            subreddits = ['wallstreetbets', 'investing', 'stocks', 'apple']
-            all_posts = []
+        """Fetch Reddit sentiment for Apple with retry logic"""
+        headers = {'User-Agent': 'AppleStockAnalyzer/1.0'}
+        subreddits = ['wallstreetbets', 'investing', 'stocks', 'apple']
+        all_posts = []
+        
+        # Use rate limiter for subreddit requests
+        reddit_limiter = RateLimiter(calls_per_second=1.0)
+        
+        for subreddit in subreddits:
+            reddit_limiter.wait_if_needed()
             
-            for subreddit in subreddits:
-                url = f"https://www.reddit.com/r/{subreddit}/search.json"
-                params = {
-                    'q': 'Apple OR AAPL',
-                    'sort': 'new',
-                    'limit': 25,
-                    't': 'week'
-                }
-                
-                response = requests.get(url, headers=headers, params=params, timeout=10)
-                if response.status_code == 200:
-                    data = response.json()
-                    posts = data.get('data', {}).get('children', [])
-                    all_posts.extend(posts)
-            
-            # Analyze sentiment
-            sentiments = []
-            for post in all_posts:
-                post_data = post.get('data', {})
-                text = post_data.get('title', '') + " " + post_data.get('selftext', '')
-                if text.strip():
-                    sentiment = self.analyze_text_sentiment(text)
-                    sentiments.append(sentiment['score'])
-            
-            if sentiments:
-                avg_sentiment = np.mean(sentiments)
-                bullish_posts = sum(1 for s in sentiments if s > 60)
-                bearish_posts = sum(1 for s in sentiments if s < 40)
-            else:
-                avg_sentiment = 50
-                bullish_posts = 0
-                bearish_posts = 0
-            
-            return {
-                'avg_sentiment': avg_sentiment,
-                'post_count': len(sentiments),
-                'bullish_posts': bullish_posts,
-                'bearish_posts': bearish_posts
+            url = f"https://www.reddit.com/r/{subreddit}/search.json"
+            params = {
+                'q': 'Apple OR AAPL',
+                'sort': 'new',
+                'limit': 25,
+                't': 'week'
             }
             
-        except Exception as e:
-            print(f"Error fetching Reddit sentiment: {e}")
-            return {'avg_sentiment': 50, 'post_count': 0}
+            response = safe_request(
+                method='GET',
+                url=url,
+                headers=headers,
+                params=params,
+                timeout=10,
+                retry_config=RetryConfig(max_retries=2)
+            )
+            
+            if response and response.status_code == 200:
+                data = response.json()
+                posts = data.get('data', {}).get('children', [])
+                all_posts.extend(posts)
+        
+        # Analyze sentiment
+        sentiments = []
+        for post in all_posts:
+            post_data = post.get('data', {})
+            text = post_data.get('title', '') + " " + post_data.get('selftext', '')
+            if text.strip():
+                sentiment = self.analyze_text_sentiment(text)
+                sentiments.append(sentiment['score'])
+        
+        if sentiments:
+            avg_sentiment = np.mean(sentiments)
+            bullish_posts = sum(1 for s in sentiments if s > 60)
+            bearish_posts = sum(1 for s in sentiments if s < 40)
+        else:
+            avg_sentiment = 50
+            bullish_posts = 0
+            bearish_posts = 0
+        
+        return {
+            'avg_sentiment': avg_sentiment,
+            'post_count': len(sentiments),
+            'bullish_posts': bullish_posts,
+            'bearish_posts': bearish_posts
+        }
     
+    @cached(ttl=CACHE_CONFIGS['historical_data']['ttl'], key_prefix='fundamental')
     def fetch_fundamental_data(self):
-        """Fetch fundamental data for Apple"""
+        """Fetch fundamental data for Apple with caching"""
         try:
             ticker = yf.Ticker(self.symbol)
             info = ticker.info
@@ -390,150 +446,155 @@ class AppleDataFetcher:
             return verification_results
     
     def cross_verify_prices(self, stock_data):
-        """Cross-verify prices from multiple sources"""
+        """Cross-verify prices from multiple sources using parallel fetching"""
         verification_result = {
             'sources_compared': 0,
             'discrepancies': [],
             'primary_price': stock_data['current_price']
         }
         
-        sources = []
+        sources = [('Yahoo Finance', stock_data['current_price'])]
         
-        try:
-            # Source 1: Yahoo Finance (already have)
-            yahoo_price = stock_data['current_price']
-            sources.append(('Yahoo Finance', yahoo_price))
+        # Prepare parallel fetch tasks
+        fetch_tasks = []
+        
+        if self.av_key and self.av_key != 'your_alpha_vantage_key_here':
+            fetch_tasks.append(('Alpha Vantage', self.get_alpha_vantage_price))
+        
+        if VERIFICATION_SETTINGS['WEB_SCRAPING_BACKUP']:
+            fetch_tasks.append(('Web Scraping', self.scrape_web_price))
+        
+        fetch_tasks.append(('Alternative API', self.get_alternative_price))
+        
+        # Fetch prices in parallel
+        with ParallelProcessor(max_workers=3) as processor:
+            results = processor.map(
+                lambda task: (task[0], task[1]()),
+                fetch_tasks
+            )
+        
+        # Add successful fetches to sources
+        for source_name, price in results:
+            if price is not None:
+                sources.append((source_name, price))
+        
+        verification_result['sources_compared'] = len(sources)
+        
+        # Compare prices
+        if len(sources) > 1:
+            base_price = sources[0][1]
             
-            # Source 2: Alpha Vantage (if available)
-            if self.av_key and self.av_key != 'your_alpha_vantage_key_here':
-                try:
-                    av_price = self.get_alpha_vantage_price()
-                    if av_price:
-                        sources.append(('Alpha Vantage', av_price))
-                except:
-                    pass
-            
-            # Source 3: Web scraping from financial sites (simplified)
-            if VERIFICATION_SETTINGS['WEB_SCRAPING_BACKUP']:
-                try:
-                    web_price = self.scrape_web_price()
-                    if web_price:
-                        sources.append(('Web Scraping', web_price))
-                except:
-                    pass
-            
-            # Source 4: Alternative API (Finnhub, IEX, etc.)
-            try:
-                alt_price = self.get_alternative_price()
-                if alt_price:
-                    sources.append(('Alternative API', alt_price))
-            except:
-                pass
-            
-            verification_result['sources_compared'] = len(sources)
-            
-            # Compare prices
-            if len(sources) > 1:
-                base_price = sources[0][1]
+            for source_name, price in sources[1:]:
+                price_diff = abs(price - base_price)
+                price_diff_percent = (price_diff / base_price) * 100
                 
-                for source_name, price in sources[1:]:
-                    price_diff = abs(price - base_price)
-                    price_diff_percent = (price_diff / base_price) * 100
-                    
-                    if price_diff_percent > VERIFICATION_SETTINGS['PRICE_DISCREPANCY_THRESHOLD']:
-                        verification_result['discrepancies'].append({
-                            'source': source_name,
-                            'price': price,
-                            'difference': price_diff,
-                            'difference_percent': price_diff_percent
-                        })
-            
-        except Exception as e:
-            verification_result['discrepancies'].append({
-                'error': f"Price verification error: {e}"
-            })
+                if price_diff_percent > VERIFICATION_SETTINGS['PRICE_DISCREPANCY_THRESHOLD']:
+                    verification_result['discrepancies'].append({
+                        'source': source_name,
+                        'price': price,
+                        'difference': price_diff,
+                        'difference_percent': price_diff_percent
+                    })
         
         return verification_result
     
+    @retry_with_backoff(RetryConfig(max_retries=2, initial_delay=1.0))
+    @rate_limited(calls_per_second=5.0)  # Alpha Vantage free tier limit
     def get_alpha_vantage_price(self):
-        """Get price from Alpha Vantage API"""
-        try:
-            url = f"https://www.alphavantage.co/query"
-            params = {
-                'function': 'GLOBAL_QUOTE',
-                'symbol': self.symbol,
-                'apikey': self.av_key
-            }
+        """Get price from Alpha Vantage API with retry logic"""
+        url = f"https://www.alphavantage.co/query"
+        params = {
+            'function': 'GLOBAL_QUOTE',
+            'symbol': self.symbol,
+            'apikey': self.av_key
+        }
+        
+        response = safe_request(
+            method='GET',
+            url=url,
+            params=params,
+            timeout=10
+        )
+        
+        if response and response.status_code == 200:
+            data = response.json()
             
-            response = requests.get(url, params=params, timeout=10)
-            if response.status_code == 200:
-                data = response.json()
-                if 'Global Quote' in data and '05. price' in data['Global Quote']:
-                    return float(data['Global Quote']['05. price'])
+            # Check for rate limit message
+            if 'Note' in data and 'API call frequency' in data['Note']:
+                raise requests.exceptions.HTTPError("Alpha Vantage rate limit reached")
             
-            return None
-            
-        except Exception as e:
-            return None
+            if 'Global Quote' in data and '05. price' in data['Global Quote']:
+                return float(data['Global Quote']['05. price'])
+        
+        return None
     
+    @retry_with_backoff(RetryConfig(max_retries=2, initial_delay=2.0))
+    @handle_api_errors(default_return=None)
     def scrape_web_price(self):
-        """Scrape Apple stock price from a financial website"""
-        try:
-            import requests
-            from bs4 import BeautifulSoup
+        """Scrape Apple stock price from a financial website with retry logic"""
+        from bs4 import BeautifulSoup
+        import re
+        
+        # Using Yahoo Finance web scraping as backup
+        url = f"https://finance.yahoo.com/quote/{self.symbol}"
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        
+        response = safe_request(
+            method='GET',
+            url=url,
+            headers=headers,
+            timeout=15,
+            retry_config=RetryConfig(max_retries=2)
+        )
+        
+        if response and response.status_code == 200:
+            soup = BeautifulSoup(response.text, 'html.parser')
             
-            # Using Yahoo Finance web scraping as backup
-            url = f"https://finance.yahoo.com/quote/{self.symbol}"
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-            }
+            # Look for price in various possible locations
+            price_selectors = [
+                'fin-streamer[data-symbol="AAPL"][data-field="regularMarketPrice"]',
+                'span[data-reactid*="regularMarketPrice"]',
+                '.Trsdu\\(0\\.3s\\) .Fw\\(b\\) .Fz\\(36px\\)'
+            ]
             
-            response = requests.get(url, headers=headers, timeout=10)
-            if response.status_code == 200:
-                soup = BeautifulSoup(response.text, 'html.parser')
-                
-                # Look for price in various possible locations
-                price_selectors = [
-                    'fin-streamer[data-symbol="AAPL"][data-field="regularMarketPrice"]',
-                    'span[data-reactid*="regularMarketPrice"]',
-                    '.Trsdu\\(0\\.3s\\) .Fw\\(b\\) .Fz\\(36px\\)'
-                ]
-                
-                for selector in price_selectors:
-                    try:
-                        element = soup.select_one(selector)
-                        if element:
-                            price_text = element.get_text().strip()
-                            # Extract number from text
-                            import re
-                            price_match = re.search(r'[\d,]+\.?\d*', price_text)
-                            if price_match:
-                                price = float(price_match.group().replace(',', ''))
-                                return price
-                    except:
-                        continue
-            
-            return None
-            
-        except Exception as e:
-            return None
+            for selector in price_selectors:
+                try:
+                    element = soup.select_one(selector)
+                    if element:
+                        price_text = element.get_text().strip()
+                        # Extract number from text
+                        price_match = re.search(r'[\d,]+\.?\d*', price_text)
+                        if price_match:
+                            price = float(price_match.group().replace(',', ''))
+                            return price
+                except Exception as e:
+                    logger.debug(f"Failed to extract price with selector {selector}: {e}")
+                    continue
+        
+        return None
     
+    @retry_with_backoff(RetryConfig(max_retries=2, initial_delay=1.0))
+    @rate_limited(calls_per_second=1.0)
     def get_alternative_price(self):
-        """Get price from alternative free API"""
-        try:
-            # Using Financial Modeling Prep (free tier)
-            url = f"https://financialmodelingprep.com/api/v3/quote/{self.symbol}?apikey=demo"
-            response = requests.get(url, timeout=10)
-            
-            if response.status_code == 200:
-                data = response.json()
-                if data and len(data) > 0:
-                    return float(data[0]['price'])
-            
-            return None
-            
-        except Exception as e:
-            return None
+        """Get price from alternative free API with retry logic"""
+        # Using Financial Modeling Prep (free tier)
+        url = f"https://financialmodelingprep.com/api/v3/quote/{self.symbol}?apikey=demo"
+        
+        response = safe_request(
+            method='GET',
+            url=url,
+            timeout=10,
+            retry_config=RetryConfig(max_retries=2)
+        )
+        
+        if response and response.status_code == 200:
+            data = response.json()
+            if data and isinstance(data, list) and len(data) > 0:
+                return float(data[0].get('price', 0))
+        
+        return None
     
     def check_data_anomalies(self, stock_data):
         """Check for data anomalies in stock data"""

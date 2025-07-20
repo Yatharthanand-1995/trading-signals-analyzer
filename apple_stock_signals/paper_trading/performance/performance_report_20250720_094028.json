@@ -1,0 +1,50 @@
+{
+  "account_name": "test_strategy",
+  "report_date": "2025-07-20T09:40:28.019651",
+  "account_summary": {
+    "initial_balance": 10000.0,
+    "current_cash": 906.25,
+    "positions_count": 2
+  },
+  "performance_metrics": {
+    "total_trades": 0,
+    "winning_trades": 0,
+    "losing_trades": 0,
+    "win_rate": 0,
+    "avg_win": 0,
+    "avg_loss": 0,
+    "profit_factor": 0,
+    "total_pnl": 0,
+    "sharpe_ratio": 0,
+    "max_drawdown": 0
+  },
+  "current_positions": {
+    "positions": {
+      "AAPL": {
+        "shares": 30,
+        "avg_price": 210.5,
+        "current_price": 210.5,
+        "position_value": 6315.0,
+        "cost_basis": 6315.0,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0
+      },
+      "GOOGL": {
+        "shares": 15,
+        "avg_price": 185.25,
+        "current_price": 185.25,
+        "position_value": 2778.75,
+        "cost_basis": 2778.75,
+        "unrealized_pnl": 0.0,
+        "unrealized_pnl_pct": 0.0
+      }
+    },
+    "total_positions_value": 9093.75,
+    "cash_balance": 906.25,
+    "total_portfolio_value": 10000.0,
+    "initial_balance": 10000.0,
+    "total_return": 0.0,
+    "total_return_pct": 0.0
+  },
+  "recent_trades": []
+}

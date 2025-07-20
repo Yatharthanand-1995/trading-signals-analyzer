@@ -12,6 +12,13 @@ import requests
 import json
 import time
 import sys
+import os
+
+# Add parent directory to path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Import configuration
+from config.env_config import config
 
 class LiveStockAnalyzer:
     def __init__(self):
@@ -64,8 +71,16 @@ class LiveStockAnalyzer:
     def fetch_finnhub_data(self, symbol):
         """Fetch data from Finnhub (free tier)"""
         try:
-            # Using Finnhub free API
-            api_key = 'ct7a2r1r01qgs0109lngct7a2r1r01qgs0109lo0'  # Free tier key
+            # Get API key from environment
+            api_key = config.FINNHUB_API_KEY
+            if not api_key:
+                if config.IS_DEVELOPMENT:
+                    # Use demo key for development only
+                    api_key = 'demo'
+                else:
+                    print("Warning: FINNHUB_API_KEY not configured")
+                    return None
+            
             url = f'https://finnhub.io/api/v1/quote?symbol={symbol}&token={api_key}'
             
             response = requests.get(url)
@@ -182,10 +197,6 @@ class LiveStockAnalyzer:
                 'ATR': round(atr.iloc[-1], 2) if not atr.empty else 0,
                 'current_price': round(close_prices.iloc[-1], 2)
             }
-            
-        except Exception as e:
-            print(f"Error calculating indicators for {symbol}: {e}")
-            return None
     
     def analyze_stock(self, symbol):
         """Comprehensive analysis with verified data"""

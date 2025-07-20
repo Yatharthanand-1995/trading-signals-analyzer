@@ -11,16 +11,30 @@ from datetime import datetime, timedelta
 import os
 from typing import Dict, List, Optional, Tuple
 import sqlite3
+import sys
+import logging
+
+# Add parent directory to path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from utils.validators import Validators, ValidationError, validate_inputs
+
+logger = logging.getLogger(__name__)
 
 class PaperTradingAccount:
+    @validate_inputs(
+        initial_balance=lambda x: Validators.validate_positive_number(x, "initial_balance", max_value=10000000),
+        account_name=lambda x: str(x).strip() if x else "default"
+    )
     def __init__(self, initial_balance=10000, account_name="default"):
-        self.account_name = account_name
+        # Sanitize account name to prevent directory traversal
+        self.account_name = account_name.replace("/", "_").replace("\\", "_").replace("..", "_")
         self.initial_balance = initial_balance
         self.cash_balance = initial_balance
         self.positions = {}  # {symbol: {'shares': x, 'avg_price': y}}
         self.trades = []
         self.daily_values = []
-        self.db_path = f"paper_trading/paper_trading_{account_name}.db"
+        self.db_path = f"paper_trading/paper_trading_{self.account_name}.db"
         
         # Create directory
         os.makedirs("paper_trading", exist_ok=True)
@@ -119,12 +133,19 @@ class PaperTradingAccount:
         
         conn.close()
     
+    @validate_inputs(
+        symbol=lambda x: Validators.validate_stock_symbol(x, allow_lowercase=True),
+        action=lambda x: Validators.validate_trading_action(x),
+        quantity=lambda x: Validators.validate_integer(x, min_value=1, max_value=1000000, name="quantity"),
+        price=lambda x: Validators.validate_positive_number(x, "price", max_value=1000000),
+        commission=lambda x: Validators.validate_positive_number(x, "commission", allow_zero=True, max_value=1000)
+    )
     def execute_trade(self, symbol: str, action: str, quantity: int, price: float, 
                      signal_data: Dict = None, commission: float = 0):
-        """Execute a paper trade"""
+        """Execute a paper trade with validated inputs"""
         timestamp = datetime.now()
         
-        if action.upper() == 'BUY':
+        if action == 'BUY':  # Already validated and uppercase
             total_cost = quantity * price + commission
             
             if total_cost > self.cash_balance:
@@ -147,7 +168,7 @@ class PaperTradingAccount:
             
             trade_type = 'BUY'
             
-        elif action.upper() == 'SELL':
+        elif action == 'SELL':  # Already validated and uppercase
             if symbol not in self.positions or self.positions[symbol]['shares'] < quantity:
                 print(f"❌ Insufficient shares. Trying to sell {quantity}, have {self.positions.get(symbol, {}).get('shares', 0)}")
                 return False
@@ -167,9 +188,7 @@ class PaperTradingAccount:
             
             trade_type = 'SELL'
         
-        else:
-            print(f"❌ Invalid action: {action}")
-            return False
+        # No else needed - action is already validated
         
         # Record trade
         trade_record = {

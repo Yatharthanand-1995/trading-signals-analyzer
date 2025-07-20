@@ -1,7 +1,0 @@
-{
-  "training_date": "2025-07-20T02:08:46.351679",
-  "best_symbol": "AAPL",
-  "best_accuracy": 0.6266666666666667,
-  "model_path": "ml_models/saved_models/ml_model_latest.pkl",
-  "status": "success"
-}

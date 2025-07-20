@@ -1,1 +1,0 @@
-# This file makes the trading_systems directory a Python package
