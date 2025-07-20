@@ -1,0 +1,62 @@
+[
+  {
+    "timestamp": "2025-07-20T02:00:00.209458",
+    "symbol": "AAPL",
+    "action": "BUY",
+    "quantity": 10,
+    "price": 210.5,
+    "commission": 0,
+    "total_value": 2105.0,
+    "signal_data": {
+      "signal": "STRONG_BUY",
+      "confidence": 85
+    },
+    "cash_after": 7895.0,
+    "portfolio_value": 10000.0
+  },
+  {
+    "timestamp": "2025-07-20T02:00:00.210878",
+    "symbol": "GOOGL",
+    "action": "BUY",
+    "quantity": 5,
+    "price": 185.25,
+    "commission": 0,
+    "total_value": 926.25,
+    "signal_data": {
+      "signal": "BUY",
+      "confidence": 70
+    },
+    "cash_after": 6968.75,
+    "portfolio_value": 10000.0
+  },
+  {
+    "timestamp": "2025-07-20T02:08:47.594909",
+    "symbol": "AAPL",
+    "action": "BUY",
+    "quantity": 10,
+    "price": 210.5,
+    "commission": 0,
+    "total_value": 2105.0,
+    "signal_data": {
+      "signal": "STRONG_BUY",
+      "confidence": 85
+    },
+    "cash_after": 4863.75,
+    "portfolio_value": 10000.0
+  },
+  {
+    "timestamp": "2025-07-20T02:08:47.596484",
+    "symbol": "GOOGL",
+    "action": "BUY",
+    "quantity": 5,
+    "price": 185.25,
+    "commission": 0,
+    "total_value": 926.25,
+    "signal_data": {
+      "signal": "BUY",
+      "confidence": 70
+    },
+    "cash_after": 3937.5,
+    "portfolio_value": 10000.0
+  }
+]

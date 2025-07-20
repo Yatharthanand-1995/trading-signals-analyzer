@@ -10,10 +10,33 @@ import pandas as pd
 from datetime import datetime
 
 # Add parent directory to path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(parent_dir)
 
 from ml_models.basic_ml_predictor import BasicMLPredictor
-from core_scripts.config import STOCKS
+
+# Try to import STOCKS from config or use default
+try:
+    from core_scripts.config import STOCKS
+except ImportError:
+    # Use default stocks from config file
+    import json
+    config_path = os.path.join(parent_dir, 'config', 'stocks_config.json')
+    if os.path.exists(config_path):
+        with open(config_path, 'r') as f:
+            config = json.load(f)
+            # Find active list
+            active_list = None
+            for list_name, list_data in config['stock_lists'].items():
+                if list_data.get('active', False):
+                    active_list = list_name
+                    break
+            if active_list:
+                STOCKS = config['stock_lists'][active_list]['symbols']
+            else:
+                STOCKS = ['AAPL', 'MSFT', 'GOOGL', 'TSLA', 'NVDA']
+    else:
+        STOCKS = ['AAPL', 'MSFT', 'GOOGL', 'TSLA', 'NVDA']
 
 def train_all_models():
     """Train ML models for all configured stocks"""

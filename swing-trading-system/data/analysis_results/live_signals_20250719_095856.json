@@ -1,0 +1,312 @@
+{
+  "AAPL": {
+    "symbol": "AAPL",
+    "timestamp": "2025-07-19 09:58:54",
+    "signal": "NO TRADE - Not in uptrend",
+    "action": "WAIT",
+    "signal_strength": {
+      "total_score": 110,
+      "trend_score": 40,
+      "momentum_score": 45,
+      "minimum_required": 65
+    },
+    "current_data": {
+      "price": 211.18,
+      "volume": 48939500,
+      "volume_ratio": 0.89,
+      "day_change": 1.16,
+      "day_change_pct": 0.55
+    },
+    "technical_indicators": {
+      "rsi": 56.77,
+      "macd": 2.218,
+      "macd_signal": 2.08,
+      "ema_21": 207.79,
+      "sma_50": 204.34,
+      "sma_200": NaN,
+      "atr": 4.07,
+      "bb_position": 0.7,
+      "range_position": 0.74
+    },
+    "trade_setup": {
+      "entry_price": 211.18,
+      "stop_loss": 205.07,
+      "take_profit_1": 222.17,
+      "take_profit_2": 229.49,
+      "risk_pct": 2.89,
+      "reward_pct_1": 5.2,
+      "reward_pct_2": 8.67,
+      "risk_reward_1": 1.8,
+      "risk_reward_2": 3.0
+    },
+    "position_sizing": {
+      "shares_to_buy": 32,
+      "position_value": 6757.76,
+      "risk_amount": 200,
+      "account_size": 10000,
+      "position_pct": 67.58
+    },
+    "signal_factors": [
+      "Perfect EMA alignment",
+      "Above SMA50",
+      "RSI healthy (56.8)",
+      "MACD bullish",
+      "5-day momentum +0.0%",
+      "At EMA21 support",
+      "Low volatility environment"
+    ],
+    "market_info": {
+      "in_uptrend": false,
+      "volatility_percentile": 2.0,
+      "52_week_high": 260.1,
+      "52_week_low": 169.21,
+      "market_cap": 3154142035968
+    }
+  },
+  "GOOGL": {
+    "symbol": "GOOGL",
+    "timestamp": "2025-07-19 09:58:54",
+    "signal": "NO TRADE - Not in uptrend",
+    "action": "WAIT",
+    "signal_strength": {
+      "total_score": 85,
+      "trend_score": 40,
+      "momentum_score": 35,
+      "minimum_required": 65
+    },
+    "current_data": {
+      "price": 185.06,
+      "volume": 33966100,
+      "volume_ratio": 0.8,
+      "day_change": 1.48,
+      "day_change_pct": 0.81
+    },
+    "technical_indicators": {
+      "rsi": 81.49,
+      "macd": 3.367,
+      "macd_signal": 2.785,
+      "ema_21": 178.02,
+      "sma_50": 171.61,
+      "sma_200": NaN,
+      "atr": 3.99,
+      "bb_position": 0.87,
+      "range_position": 0.94
+    },
+    "trade_setup": {
+      "entry_price": 185.06,
+      "stop_loss": 179.08,
+      "take_profit_1": 195.83,
+      "take_profit_2": 203.0,
+      "risk_pct": 3.23,
+      "reward_pct_1": 5.82,
+      "reward_pct_2": 9.7,
+      "risk_reward_1": 1.8,
+      "risk_reward_2": 3.0
+    },
+    "position_sizing": {
+      "shares_to_buy": 33,
+      "position_value": 6106.98,
+      "risk_amount": 200,
+      "account_size": 10000,
+      "position_pct": 61.07
+    },
+    "signal_factors": [
+      "Perfect EMA alignment",
+      "Above SMA50",
+      "MACD bullish",
+      "MACD accelerating",
+      "5-day momentum +2.7%",
+      "Low volatility environment"
+    ],
+    "market_info": {
+      "in_uptrend": false,
+      "volatility_percentile": 8.0,
+      "52_week_high": 207.05,
+      "52_week_low": 140.53,
+      "market_cap": 2250459316224
+    }
+  },
+  "TSLA": {
+    "symbol": "TSLA",
+    "timestamp": "2025-07-19 09:58:55",
+    "signal": "NO TRADE - Not in uptrend",
+    "action": "WAIT",
+    "signal_strength": {
+      "total_score": 55,
+      "trend_score": 10,
+      "momentum_score": 35,
+      "minimum_required": 65
+    },
+    "current_data": {
+      "price": 329.65,
+      "volume": 94010900,
+      "volume_ratio": 0.93,
+      "day_change": 10.24,
+      "day_change_pct": 3.21
+    },
+    "technical_indicators": {
+      "rsi": 81.7,
+      "macd": -0.387,
+      "macd_signal": -2.158,
+      "ema_21": 316.87,
+      "sma_50": 323.94,
+      "sma_200": NaN,
+      "atr": 12.41,
+      "bb_position": 0.72,
+      "range_position": 0.59
+    },
+    "trade_setup": {
+      "entry_price": 329.65,
+      "stop_loss": 311.04,
+      "take_profit_1": 363.15,
+      "take_profit_2": 385.48,
+      "risk_pct": 5.65,
+      "reward_pct_1": 10.16,
+      "reward_pct_2": 16.94,
+      "risk_reward_1": 1.8,
+      "risk_reward_2": 3.0
+    },
+    "position_sizing": {
+      "shares_to_buy": 10,
+      "position_value": 3296.5,
+      "risk_amount": 200,
+      "account_size": 10000,
+      "position_pct": 32.96
+    },
+    "signal_factors": [
+      "Above SMA50",
+      "MACD bullish",
+      "MACD accelerating",
+      "5-day momentum +5.1%",
+      "Low volatility environment"
+    ],
+    "market_info": {
+      "in_uptrend": false,
+      "volatility_percentile": 23.0,
+      "52_week_high": 488.54,
+      "52_week_low": 182.0,
+      "market_cap": 1061789433856
+    }
+  },
+  "MSFT": {
+    "symbol": "MSFT",
+    "timestamp": "2025-07-19 09:58:55",
+    "signal": "NO TRADE - Not in uptrend",
+    "action": "WAIT",
+    "signal_strength": {
+      "total_score": 60,
+      "trend_score": 40,
+      "momentum_score": 10,
+      "minimum_required": 65
+    },
+    "current_data": {
+      "price": 510.05,
+      "volume": 21203400,
+      "volume_ratio": 1.07,
+      "day_change": -1.65,
+      "day_change_pct": -0.32
+    },
+    "technical_indicators": {
+      "rsi": 76.93,
+      "macd": 10.482,
+      "macd_signal": 10.872,
+      "ema_21": 496.21,
+      "sma_50": 475.35,
+      "sma_200": NaN,
+      "atr": 6.17,
+      "bb_position": 0.87,
+      "range_position": 0.89
+    },
+    "trade_setup": {
+      "entry_price": 510.05,
+      "stop_loss": 500.8,
+      "take_profit_1": 526.71,
+      "take_profit_2": 537.81,
+      "risk_pct": 1.81,
+      "reward_pct_1": 3.27,
+      "reward_pct_2": 5.44,
+      "risk_reward_1": 1.8,
+      "risk_reward_2": 3.0
+    },
+    "position_sizing": {
+      "shares_to_buy": 21,
+      "position_value": 10711.05,
+      "risk_amount": 200,
+      "account_size": 10000,
+      "position_pct": 107.11
+    },
+    "signal_factors": [
+      "Perfect EMA alignment",
+      "Above SMA50",
+      "5-day momentum +1.3%",
+      "Low volatility environment"
+    ],
+    "market_info": {
+      "in_uptrend": false,
+      "volatility_percentile": 14.0,
+      "52_week_high": 514.64,
+      "52_week_low": 344.79,
+      "market_cap": 3790967144448
+    }
+  },
+  "UNH": {
+    "symbol": "UNH",
+    "timestamp": "2025-07-19 09:58:56",
+    "signal": "NO TRADE - Not in uptrend",
+    "action": "WAIT",
+    "signal_strength": {
+      "total_score": 40,
+      "trend_score": 0,
+      "momentum_score": 15,
+      "minimum_required": 65
+    },
+    "current_data": {
+      "price": 282.65,
+      "volume": 14931600,
+      "volume_ratio": 1.25,
+      "day_change": -5.42,
+      "day_change_pct": -1.88
+    },
+    "technical_indicators": {
+      "rsi": 23.53,
+      "macd": -7.746,
+      "macd_signal": -6.715,
+      "ema_21": 301.37,
+      "sma_50": 308.32,
+      "sma_200": NaN,
+      "atr": 8.41,
+      "bb_position": -0.04,
+      "range_position": 0.04
+    },
+    "trade_setup": {
+      "entry_price": 282.65,
+      "stop_loss": 279.41,
+      "take_profit_1": 288.49,
+      "take_profit_2": 292.38,
+      "risk_pct": 1.15,
+      "reward_pct_1": 2.07,
+      "reward_pct_2": 3.44,
+      "risk_reward_1": 1.8,
+      "risk_reward_2": 3.0
+    },
+    "position_sizing": {
+      "shares_to_buy": 61,
+      "position_value": 17241.65,
+      "risk_amount": 200,
+      "account_size": 10000,
+      "position_pct": 172.42
+    },
+    "signal_factors": [
+      "Volume surge 1.3x",
+      "Near Bollinger lower band",
+      "Low volatility environment"
+    ],
+    "market_info": {
+      "in_uptrend": false,
+      "volatility_percentile": 39.0,
+      "52_week_high": 630.73,
+      "52_week_low": 248.88,
+      "market_cap": 256403111936
+    }
+  }
+}

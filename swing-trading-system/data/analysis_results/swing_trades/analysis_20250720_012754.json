@@ -1,0 +1,2100 @@
+{
+  "timestamp": "20250720_012754",
+  "total_analyzed": 10,
+  "valid_trades": 0,
+  "all_results": [
+    {
+      "symbol": "AAPL",
+      "timestamp": "2025-07-20 01:27:44",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "AAPL",
+        "liquidity": {
+          "avg_volume": 54773785.0,
+          "avg_dollar_volume": 11567127515.124817,
+          "current_price": 211.17999267578125,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": true,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": true,
+          "trend_score": 100,
+          "performance_5d": 0.009466287803186773,
+          "performance_20d": 7.426997003120453,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 7.426997003120453,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 1.019662929606348,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 4.069999694824219,
+          "atr_pct": 1.927265761900454,
+          "annualized_volatility": 39.994606003235354,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 70.07150884202495,
+          "roc_10": -1.109815191808799,
+          "price_position": 73.92873348080086,
+          "rsi_status": "overbought",
+          "momentum_favorable": "False",
+          "passes_filter": "True"
+        },
+        "patterns": {
+          "patterns_detected": [
+            "higher_lows",
+            "pullback_to_support",
+            "flag_pattern"
+          ],
+          "pattern_count": 3,
+          "has_bullish_pattern": true,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 80,
+          "max_score": 100,
+          "filter_percentage": 80.0,
+          "passes_all_critical": true,
+          "recommendation": "EXCELLENT"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bearish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 211.17999267578125,
+            "resistance_1": 213.2066599527995,
+            "resistance_2": 215.23332722981772,
+            "support_1": 208.34665934244794,
+            "support_2": 205.5133260091146,
+            "nearest_resistance": 213.2066599527995,
+            "nearest_support": 208.34665934244794
+          },
+          "indicators": {
+            "rsi": 57.529900745553896,
+            "macd": -3.4452511620209805,
+            "macd_signal": -4.9560775816431795,
+            "macd_histogram": 1.510826419622199,
+            "stoch_k": 81.0638458992094,
+            "stoch_d": 83.1437723144484,
+            "sma_20": 206.40561218261718,
+            "sma_50": 206.40561218261718,
+            "ema_9": 206.86202545296362,
+            "price_vs_sma20": 2.313105948369245,
+            "price_vs_sma50": 2.313105948369245
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 23.014237673579665,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 211.17999267578125,
+            "resistance_1": 212.07999165852863,
+            "resistance_2": 212.97999064127603,
+            "support_1": 209.989995320638,
+            "support_2": 208.79999796549478,
+            "nearest_resistance": 212.07999165852863,
+            "nearest_support": 209.989995320638
+          },
+          "indicators": {
+            "rsi": 70.07150884202495,
+            "macd": 2.337353297550152,
+            "macd_signal": 2.2548984502908853,
+            "macd_histogram": 0.08245484725926655,
+            "stoch_k": 70.24158698588136,
+            "stoch_d": 65.95956526091598,
+            "sma_20": 207.45900039672853,
+            "sma_50": 204.33508697509765,
+            "ema_9": 209.91751600502323,
+            "price_vs_sma20": 1.7936036864811773,
+            "price_vs_sma50": 3.349843534956768
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 37.42486311261216,
+            "trend_direction": "bearish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 211.22000122070312,
+            "resistance_1": 211.75333150227863,
+            "resistance_2": 212.28666178385416,
+            "support_1": 210.72333272298175,
+            "support_2": 210.2266642252604,
+            "nearest_resistance": 211.75333150227863,
+            "nearest_support": 210.72333272298175
+          },
+          "indicators": {
+            "rsi": 50.372933964460294,
+            "macd": 1.3750873276175355,
+            "macd_signal": 1.663629643287996,
+            "macd_histogram": -0.2885423156704605,
+            "stoch_k": 61.95297006812507,
+            "stoch_d": 55.25131867722035,
+            "sma_20": 210.36615905761718,
+            "sma_50": 210.36615905761718,
+            "ema_9": 210.51334209050717,
+            "price_vs_sma20": 0.40588380132570867,
+            "price_vs_sma50": 0.40588380132570867
+          }
+        },
+        "alignment": {
+          "alignment_score": 6,
+          "alignment_percentage": 66.66666666666666,
+          "is_aligned": false,
+          "signals": {
+            "weekly_trend": "bearish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bullish",
+            "daily_momentum": "bullish",
+            "daily_ma": "above",
+            "4hour_trend": "bearish",
+            "4hour_momentum": "neutral",
+            "4hour_ma": "above"
+          },
+          "recommendation": "HOLD"
+        },
+        "entry_timing": {
+          "daily_trend": "bullish",
+          "daily_strength": "weak",
+          "4h_rsi": 50.372933964460294,
+          "4h_stoch": 61.95297006812507,
+          "entry_quality": "poor"
+        },
+        "symbol": "AAPL",
+        "analysis_time": "2025-07-20 01:27:46"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "48939500",
+          "avg_volume": 54773785.0,
+          "relative_volume": 0.8934839905622736,
+          "is_high_volume": "False",
+          "volume_rank": 50.0
+        },
+        "obv": {
+          "obv": "168160600",
+          "obv_sma": 111906920.0,
+          "obv_trend": "up",
+          "price_trend": "up",
+          "divergence": null,
+          "obv_signal": "bullish"
+        },
+        "vwap": {
+          "vwap": 211.4418382372115,
+          "vwap_upper": 225.19922006344945,
+          "vwap_lower": 197.68445641097355,
+          "price_vs_vwap": -0.12383810300423649,
+          "vwap_signal": "bearish"
+        },
+        "mfi": {
+          "mfi": 69.50320626973019,
+          "mfi_signal": "bullish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 373817115.59875995,
+          "ad_sma": 398016813.7424431,
+          "ad_trend": "distribution",
+          "ad_divergence": "bearish_divergence"
+        },
+        "volume_score": 55,
+        "volume_signal": "neutral"
+      },
+      "error": "'historical_data'"
+    },
+    {
+      "symbol": "MSFT",
+      "timestamp": "2025-07-20 01:27:46",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "MSFT",
+        "liquidity": {
+          "avg_volume": 19763200.0,
+          "avg_dollar_volume": 10080219918.75,
+          "current_price": 510.04998779296875,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": true,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": true,
+          "trend_score": 100,
+          "performance_5d": 1.3371176132115912,
+          "performance_20d": 6.207312628014456,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 6.207312628014456,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 1.008086072970585,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 6.168572562081473,
+          "atr_pct": 1.209405491562392,
+          "annualized_volatility": 29.324436289208812,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 67.83811144942274,
+          "roc_10": 2.2472118389410394,
+          "price_position": 89.10508824236734,
+          "rsi_status": "neutral",
+          "momentum_favorable": "True",
+          "passes_filter": "True"
+        },
+        "patterns": {
+          "patterns_detected": [
+            "higher_lows",
+            "consolidation_breakout",
+            "pullback_to_support"
+          ],
+          "pattern_count": 3,
+          "has_bullish_pattern": true,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 80,
+          "max_score": 100,
+          "filter_percentage": 80.0,
+          "passes_all_critical": true,
+          "recommendation": "EXCELLENT"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 510.04998779296875,
+            "resistance_1": 516.1166687011719,
+            "resistance_2": 522.183349609375,
+            "support_1": 502.50665283203125,
+            "support_2": 494.96331787109375,
+            "nearest_resistance": 516.1166687011719,
+            "nearest_support": 502.50665283203125
+          },
+          "indicators": {
+            "rsi": 85.954765984833,
+            "macd": 22.24001702279753,
+            "macd_signal": 12.302425450737584,
+            "macd_histogram": 9.937591572059947,
+            "stoch_k": 97.12443521939623,
+            "stoch_d": 97.9235855211203,
+            "sma_20": 436.07594146728513,
+            "sma_50": 436.07594146728513,
+            "ema_9": 482.103400374358,
+            "price_vs_sma20": 16.963569711454312,
+            "price_vs_sma50": 16.963569711454312
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 49.14250483672529,
+            "trend_direction": "bullish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 510.04998779296875,
+            "resistance_1": 513.9833374023438,
+            "resistance_2": 517.9166870117188,
+            "support_1": 506.7733154296875,
+            "support_2": 503.49664306640625,
+            "nearest_resistance": 513.9833374023438,
+            "nearest_support": 506.7733154296875
+          },
+          "indicators": {
+            "rsi": 67.83811144942274,
+            "macd": 10.673631310409462,
+            "macd_signal": 11.151876149691208,
+            "macd_histogram": -0.47824483928174644,
+            "stoch_k": 82.30521810536916,
+            "stoch_d": 87.2874927153872,
+            "sma_20": 497.8709991455078,
+            "sma_50": 475.3536535644531,
+            "ema_9": 504.8497784467719,
+            "price_vs_sma20": 2.4462137116569616,
+            "price_vs_sma50": 7.299057021723547
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 29.933689515500884,
+            "trend_direction": "bullish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 509.9599914550781,
+            "resistance_1": 511.8016560872396,
+            "resistance_2": 513.6433207194011,
+            "support_1": 508.27666219075525,
+            "support_2": 506.5933329264323,
+            "nearest_resistance": 511.8016560872396,
+            "nearest_support": 508.27666219075525
+          },
+          "indicators": {
+            "rsi": 60.00927692760225,
+            "macd": 4.572193252134014,
+            "macd_signal": 4.348655627582444,
+            "macd_histogram": 0.2235376245515699,
+            "stoch_k": 72.29118333658565,
+            "stoch_d": 75.92542368146144,
+            "sma_20": 503.6767944335937,
+            "sma_50": 503.6767944335937,
+            "ema_9": 507.79235204449975,
+            "price_vs_sma20": 1.2474660518259777,
+            "price_vs_sma50": 1.2474660518259777
+          }
+        },
+        "alignment": {
+          "alignment_score": 8,
+          "alignment_percentage": 88.88888888888889,
+          "is_aligned": true,
+          "signals": {
+            "weekly_trend": "bullish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bullish",
+            "daily_momentum": "neutral",
+            "daily_ma": "above",
+            "4hour_trend": "bullish",
+            "4hour_momentum": "bullish",
+            "4hour_ma": "above"
+          },
+          "recommendation": "STRONG_BUY"
+        },
+        "entry_timing": {
+          "daily_trend": "bullish",
+          "daily_strength": "strong",
+          "4h_rsi": 60.00927692760225,
+          "4h_stoch": 72.29118333658565,
+          "entry_quality": "good"
+        },
+        "symbol": "MSFT",
+        "analysis_time": "2025-07-20 01:27:47"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "21203400",
+          "avg_volume": 19763200.0,
+          "relative_volume": 1.072872814119171,
+          "is_high_volume": "False",
+          "volume_rank": 65.0
+        },
+        "obv": {
+          "obv": "275735000",
+          "obv_sma": 284313330.0,
+          "obv_trend": "up",
+          "price_trend": "up",
+          "divergence": null,
+          "obv_signal": "bearish"
+        },
+        "vwap": {
+          "vwap": 422.7500833632389,
+          "vwap_upper": 581.138244140295,
+          "vwap_lower": 264.3619225861828,
+          "price_vs_vwap": 20.65047598221744,
+          "vwap_signal": "bullish"
+        },
+        "mfi": {
+          "mfi": 60.73850331945506,
+          "mfi_signal": "bullish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 315021923.73572606,
+          "ad_sma": 298891720.534719,
+          "ad_trend": "accumulation",
+          "ad_divergence": null
+        },
+        "volume_score": 65,
+        "volume_signal": "bullish"
+      },
+      "error": "'historical_data'"
+    },
+    {
+      "symbol": "GOOGL",
+      "timestamp": "2025-07-20 01:27:47",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "GOOGL",
+        "liquidity": {
+          "avg_volume": 42279995.0,
+          "avg_dollar_volume": 7824335771.477356,
+          "current_price": 185.05999755859375,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": true,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": true,
+          "trend_score": 100,
+          "performance_5d": 2.7026999562703895,
+          "performance_20d": 6.77359204838582,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 6.77359204838582,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 1.0134610173408056,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 3.9871412004743303,
+          "atr_pct": 2.1545127272639895,
+          "annualized_volatility": 35.483540745156155,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 64.67415456021769,
+          "roc_10": 3.080264477746204,
+          "price_position": 94.4307915138132,
+          "rsi_status": "neutral",
+          "momentum_favorable": "True",
+          "passes_filter": "True"
+        },
+        "patterns": {
+          "patterns_detected": [
+            "higher_lows"
+          ],
+          "pattern_count": 1,
+          "has_bullish_pattern": true,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 80,
+          "max_score": 100,
+          "filter_percentage": 80.0,
+          "passes_all_critical": true,
+          "recommendation": "EXCELLENT"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bearish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 185.05999755859375,
+            "resistance_1": 187.75999959309894,
+            "resistance_2": 190.46000162760416,
+            "support_1": 181.01999409993488,
+            "support_2": 176.97999064127603,
+            "nearest_resistance": 187.75999959309894,
+            "nearest_support": 181.01999409993488
+          },
+          "indicators": {
+            "rsi": 67.96720795363953,
+            "macd": -0.8945469622314874,
+            "macd_signal": -4.472977976716257,
+            "macd_histogram": 3.57843101448477,
+            "stoch_k": 96.64169572599411,
+            "stoch_d": 96.48764877062483,
+            "sma_20": 166.58318634033202,
+            "sma_50": 166.58318634033202,
+            "ema_9": 175.8178446610199,
+            "price_vs_sma20": 11.091642334487059,
+            "price_vs_sma50": 11.091642334487059
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 12.196790147419222,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 185.05999755859375,
+            "resistance_1": 186.41666158040363,
+            "resistance_2": 187.77332560221353,
+            "support_1": 183.7066701253255,
+            "support_2": 182.35334269205728,
+            "nearest_resistance": 186.41666158040363,
+            "nearest_support": 183.7066701253255
+          },
+          "indicators": {
+            "rsi": 64.67415456021769,
+            "macd": 3.4594026689619284,
+            "macd_signal": 2.921027441906558,
+            "macd_histogram": 0.5383752270553703,
+            "stoch_k": 90.03662111012491,
+            "stoch_d": 91.54441025151726,
+            "sma_20": 176.61699829101562,
+            "sma_50": 171.61466888427734,
+            "ema_9": 181.3103866976656,
+            "price_vs_sma20": 4.78040015925671,
+            "price_vs_sma50": 7.834603394761566
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 41.78805019222622,
+            "trend_direction": "bullish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 185.0399932861328,
+            "resistance_1": 185.4633331298828,
+            "resistance_2": 185.8866729736328,
+            "support_1": 184.54832458496094,
+            "support_2": 184.05665588378906,
+            "nearest_resistance": 185.4633331298828,
+            "nearest_support": 184.54832458496094
+          },
+          "indicators": {
+            "rsi": 87.4060739206623,
+            "macd": 2.7719626170637923,
+            "macd_signal": 2.527997558290964,
+            "macd_histogram": 0.24396505877282815,
+            "stoch_k": 88.27523889654493,
+            "stoch_d": 90.6914819385657,
+            "sma_20": 180.02320251464843,
+            "sma_50": 180.02320251464843,
+            "ema_9": 183.08018214365168,
+            "price_vs_sma20": 2.786746764532292,
+            "price_vs_sma50": 2.786746764532292
+          }
+        },
+        "alignment": {
+          "alignment_score": 8,
+          "alignment_percentage": 88.88888888888889,
+          "is_aligned": true,
+          "signals": {
+            "weekly_trend": "bearish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bullish",
+            "daily_momentum": "bullish",
+            "daily_ma": "above",
+            "4hour_trend": "bullish",
+            "4hour_momentum": "bullish",
+            "4hour_ma": "above"
+          },
+          "recommendation": "STRONG_BUY"
+        },
+        "entry_timing": {
+          "daily_trend": "bullish",
+          "daily_strength": "weak",
+          "4h_rsi": 87.4060739206623,
+          "4h_stoch": 88.27523889654493,
+          "entry_quality": "poor"
+        },
+        "symbol": "GOOGL",
+        "analysis_time": "2025-07-20 01:27:48"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "33966100",
+          "avg_volume": 42279995.0,
+          "relative_volume": 0.8033610221571691,
+          "is_high_volume": "False",
+          "volume_rank": 40.0
+        },
+        "obv": {
+          "obv": "86972400",
+          "obv_sma": -55751140.0,
+          "obv_trend": "up",
+          "price_trend": "up",
+          "divergence": null,
+          "obv_signal": "bullish"
+        },
+        "vwap": {
+          "vwap": 169.54174320448888,
+          "vwap_upper": 186.6676380469049,
+          "vwap_lower": 152.41584836207286,
+          "price_vs_vwap": 9.153058155942093,
+          "vwap_signal": "bullish"
+        },
+        "mfi": {
+          "mfi": 71.55136515334424,
+          "mfi_signal": "bullish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 90061169.89438799,
+          "ad_sma": 78721683.7286857,
+          "ad_trend": "accumulation",
+          "ad_divergence": null
+        },
+        "volume_score": 95,
+        "volume_signal": "strong_bullish"
+      },
+      "error": "'historical_data'"
+    },
+    {
+      "symbol": "AMZN",
+      "timestamp": "2025-07-20 01:27:48",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "AMZN",
+        "liquidity": {
+          "avg_volume": 44615965.0,
+          "avg_dollar_volume": 10089008383.301392,
+          "current_price": 226.1300048828125,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": true,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": true,
+          "trend_score": 100,
+          "performance_5d": 0.493289747256222,
+          "performance_20d": 6.40410330168396,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 6.40410330168396,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 1.009953947531271,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 3.5014310564313615,
+          "atr_pct": 1.5484150624973056,
+          "annualized_volatility": 37.642218824633986,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 55.27394412776192,
+          "roc_10": 1.2174930290126666,
+          "price_position": 94.28858213330949,
+          "rsi_status": "neutral",
+          "momentum_favorable": "True",
+          "passes_filter": "True"
+        },
+        "patterns": {
+          "patterns_detected": [
+            "higher_lows",
+            "consolidation_breakout",
+            "pullback_to_support"
+          ],
+          "pattern_count": 3,
+          "has_bullish_pattern": true,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 80,
+          "max_score": 100,
+          "filter_percentage": 80.0,
+          "passes_all_critical": true,
+          "recommendation": "EXCELLENT"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bearish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 226.1300048828125,
+            "resistance_1": 228.20667521158856,
+            "resistance_2": 230.2833455403646,
+            "support_1": 223.11666361490887,
+            "support_2": 220.10332234700522,
+            "nearest_resistance": 228.20667521158856,
+            "nearest_support": 223.11666361490887
+          },
+          "indicators": {
+            "rsi": 74.93353555442118,
+            "macd": 1.4521609957323562,
+            "macd_signal": -3.3009721537530448,
+            "macd_histogram": 4.753133149485401,
+            "stoch_k": 98.1606983098149,
+            "stoch_d": 98.22020312838511,
+            "sma_20": 201.572501373291,
+            "sma_50": 201.572501373291,
+            "ema_9": 216.42774016080656,
+            "price_vs_sma20": 12.182963123548083,
+            "price_vs_sma50": 12.182963123548083
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 24.18959740930122,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 226.1300048828125,
+            "resistance_1": 227.36000061035156,
+            "resistance_2": 228.58999633789062,
+            "support_1": 223.94000244140625,
+            "support_2": 221.75,
+            "nearest_resistance": 227.36000061035156,
+            "nearest_support": 223.94000244140625
+          },
+          "indicators": {
+            "rsi": 55.27394412776192,
+            "macd": 4.253912216271772,
+            "macd_signal": 4.4886693469419106,
+            "macd_histogram": -0.2347571306701388,
+            "stoch_k": 87.79445423757612,
+            "stoch_d": 76.28805434431452,
+            "sma_20": 220.2205017089844,
+            "sma_50": 212.2762014770508,
+            "ema_9": 223.84771979940956,
+            "price_vs_sma20": 2.6834482384557306,
+            "price_vs_sma50": 6.526310207816417
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 28.1185930195136,
+            "trend_direction": "bullish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 226.1199951171875,
+            "resistance_1": 226.69666544596356,
+            "resistance_2": 227.2733357747396,
+            "support_1": 225.19666544596356,
+            "support_2": 224.2733357747396,
+            "nearest_resistance": 226.69666544596356,
+            "nearest_support": 225.19666544596356
+          },
+          "indicators": {
+            "rsi": 64.54161033352463,
+            "macd": 1.8977418125273005,
+            "macd_signal": 2.204145998072956,
+            "macd_histogram": -0.3064041855456554,
+            "stoch_k": 84.80834818225064,
+            "stoch_d": 69.92509695469535,
+            "sma_20": 223.80075454711914,
+            "sma_50": 223.80075454711914,
+            "ema_9": 224.6379866067814,
+            "price_vs_sma20": 1.0362970289182225,
+            "price_vs_sma50": 1.0362970289182225
+          }
+        },
+        "alignment": {
+          "alignment_score": 6,
+          "alignment_percentage": 66.66666666666666,
+          "is_aligned": false,
+          "signals": {
+            "weekly_trend": "bearish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bullish",
+            "daily_momentum": "neutral",
+            "daily_ma": "above",
+            "4hour_trend": "bullish",
+            "4hour_momentum": "neutral",
+            "4hour_ma": "above"
+          },
+          "recommendation": "HOLD"
+        },
+        "entry_timing": {
+          "daily_trend": "bullish",
+          "daily_strength": "weak",
+          "4h_rsi": 64.54161033352463,
+          "4h_stoch": 84.80834818225064,
+          "entry_quality": "poor"
+        },
+        "symbol": "AMZN",
+        "analysis_time": "2025-07-20 01:27:49"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "37811600",
+          "avg_volume": 44615965.0,
+          "relative_volume": 0.8474903546297833,
+          "is_high_volume": "False",
+          "volume_rank": 45.0
+        },
+        "obv": {
+          "obv": "-75004500",
+          "obv_sma": -159798090.0,
+          "obv_trend": "up",
+          "price_trend": "up",
+          "divergence": null,
+          "obv_signal": "bullish"
+        },
+        "vwap": {
+          "vwap": 204.4967438469289,
+          "vwap_upper": 239.2259515976098,
+          "vwap_lower": 169.767536096248,
+          "price_vs_vwap": 10.578780194210164,
+          "vwap_signal": "bullish"
+        },
+        "mfi": {
+          "mfi": 54.76564715838938,
+          "mfi_signal": "bullish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 505910229.4339052,
+          "ad_sma": 469644951.97983944,
+          "ad_trend": "accumulation",
+          "ad_divergence": null
+        },
+        "volume_score": 95,
+        "volume_signal": "strong_bullish"
+      },
+      "error": "'historical_data'"
+    },
+    {
+      "symbol": "NVDA",
+      "timestamp": "2025-07-20 01:27:49",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "NVDA",
+        "liquidity": {
+          "avg_volume": 184733560.0,
+          "avg_dollar_volume": 31849913756.114502,
+          "current_price": 172.41000366210938,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": true,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": true,
+          "trend_score": 100,
+          "performance_5d": 4.541599306526334,
+          "performance_20d": 18.511141548976905,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 18.511141548976905,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 1.1248701085753359,
+          "outperforming_market": "True",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "True"
+        },
+        "volatility": {
+          "atr": 3.8742850167410716,
+          "atr_pct": 2.2471346989435306,
+          "annualized_volatility": 61.200106508497434,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 75.17174018526457,
+          "roc_10": 8.202590450989447,
+          "price_position": 94.28927291067784,
+          "rsi_status": "overbought",
+          "momentum_favorable": "False",
+          "passes_filter": "False"
+        },
+        "patterns": {
+          "patterns_detected": [
+            "higher_lows"
+          ],
+          "pattern_count": 1,
+          "has_bullish_pattern": true,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 85,
+          "max_score": 100,
+          "filter_percentage": 85.0,
+          "passes_all_critical": true,
+          "recommendation": "EXCELLENT"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 172.41000366210938,
+            "resistance_1": 177.10000101725262,
+            "resistance_2": 181.78999837239584,
+            "support_1": 164.87000528971356,
+            "support_2": 157.33000691731772,
+            "nearest_resistance": 177.10000101725262,
+            "nearest_support": 164.87000528971356
+          },
+          "indicators": {
+            "rsi": 84.70516326545903,
+            "macd": 8.726850371391407,
+            "macd_signal": 2.6618338000008617,
+            "macd_histogram": 6.0650165713905455,
+            "stoch_k": 97.67725902706957,
+            "stoch_d": 97.2725783705644,
+            "sma_20": 129.7126865386963,
+            "sma_50": 129.7126865386963,
+            "ema_9": 151.85162754774407,
+            "price_vs_sma20": 32.91683971920163,
+            "price_vs_sma50": 32.91683971920163
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 56.686348153593634,
+            "trend_direction": "bullish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 172.41000366210938,
+            "resistance_1": 174.02000427246094,
+            "resistance_2": 175.6300048828125,
+            "support_1": 171.02999877929688,
+            "support_2": 169.64999389648438,
+            "nearest_resistance": 174.02000427246094,
+            "nearest_support": 171.02999877929688
+          },
+          "indicators": {
+            "rsi": 75.17174018526457,
+            "macd": 8.096314132307356,
+            "macd_signal": 7.486974105504471,
+            "macd_histogram": 0.6093400268028848,
+            "stoch_k": 91.91565561521561,
+            "stoch_d": 93.95762493049081,
+            "sma_20": 159.62850112915038,
+            "sma_50": 145.3067446899414,
+            "ema_9": 167.4433935209064,
+            "price_vs_sma20": 8.007030350186579,
+            "price_vs_sma50": 18.652443855928002
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 55.125955865409104,
+            "trend_direction": "bullish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 172.38999938964844,
+            "resistance_1": 172.826665242513,
+            "resistance_2": 173.2633310953776,
+            "support_1": 171.87666829427081,
+            "support_2": 171.36333719889322,
+            "nearest_resistance": 172.826665242513,
+            "nearest_support": 171.87666829427081
+          },
+          "indicators": {
+            "rsi": 73.96207826063011,
+            "macd": 4.812039564528192,
+            "macd_signal": 4.633364271236129,
+            "macd_histogram": 0.17867529329206278,
+            "stoch_k": 85.35229304595757,
+            "stoch_d": 86.92512281016695,
+            "sma_20": 166.26273651123046,
+            "sma_50": 166.26273651123046,
+            "ema_9": 170.73052434183361,
+            "price_vs_sma20": 3.6852893239875826,
+            "price_vs_sma50": 3.6852893239875826
+          }
+        },
+        "alignment": {
+          "alignment_score": 9,
+          "alignment_percentage": 100.0,
+          "is_aligned": true,
+          "signals": {
+            "weekly_trend": "bullish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bullish",
+            "daily_momentum": "bullish",
+            "daily_ma": "above",
+            "4hour_trend": "bullish",
+            "4hour_momentum": "bullish",
+            "4hour_ma": "above"
+          },
+          "recommendation": "STRONG_BUY"
+        },
+        "entry_timing": {
+          "daily_trend": "bullish",
+          "daily_strength": "strong",
+          "4h_rsi": 73.96207826063011,
+          "4h_stoch": 85.35229304595757,
+          "entry_quality": "overbought_wait"
+        },
+        "symbol": "NVDA",
+        "analysis_time": "2025-07-20 01:27:50"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "146107600",
+          "avg_volume": 184733560.0,
+          "relative_volume": 0.7909098920629256,
+          "is_high_volume": "False",
+          "volume_rank": 20.0
+        },
+        "obv": {
+          "obv": "2950030300",
+          "obv_sma": 2593474540.0,
+          "obv_trend": "up",
+          "price_trend": "up",
+          "divergence": null,
+          "obv_signal": "bullish"
+        },
+        "vwap": {
+          "vwap": 125.08539392000672,
+          "vwap_upper": 198.47984404530484,
+          "vwap_lower": 51.6909437947086,
+          "price_vs_vwap": 37.83384155336888,
+          "vwap_signal": "bullish"
+        },
+        "mfi": {
+          "mfi": 66.59972380236287,
+          "mfi_signal": "bullish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 3740426228.8684688,
+          "ad_sma": 3624155988.219784,
+          "ad_trend": "accumulation",
+          "ad_divergence": null
+        },
+        "volume_score": 95,
+        "volume_signal": "strong_bullish"
+      },
+      "error": "'historical_data'"
+    },
+    {
+      "symbol": "META",
+      "timestamp": "2025-07-20 01:27:50",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "META",
+        "liquidity": {
+          "avg_volume": 12190800.0,
+          "avg_dollar_volume": 8585736981.152344,
+          "current_price": 704.280029296875,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": false,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": true,
+          "trend_score": 75,
+          "performance_5d": -1.8438739932104333,
+          "performance_20d": 1.22310670577015,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 1.22310670577015,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 0.9607775736713882,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 13.91357421875,
+          "atr_pct": 1.9755741523213084,
+          "annualized_volatility": 42.43186149769918,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 33.797110590861124,
+          "roc_10": -2.048647483162511,
+          "price_position": 36.99267807787422,
+          "rsi_status": "neutral",
+          "momentum_favorable": "True",
+          "passes_filter": "True"
+        },
+        "patterns": {
+          "patterns_detected": [],
+          "pattern_count": 0,
+          "has_bullish_pattern": false,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 70,
+          "max_score": 100,
+          "filter_percentage": 70.0,
+          "passes_all_critical": true,
+          "recommendation": "GOOD"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 704.280029296875,
+            "resistance_1": 724.3033447265625,
+            "resistance_2": 744.32666015625,
+            "support_1": 687.953369140625,
+            "support_2": 671.626708984375,
+            "nearest_resistance": 724.3033447265625,
+            "nearest_support": 687.953369140625
+          },
+          "indicators": {
+            "rsi": 71.76037898496955,
+            "macd": 22.436660180944045,
+            "macd_signal": 8.904275240874105,
+            "macd_histogram": 13.53238494006994,
+            "stoch_k": 83.75231209527824,
+            "stoch_d": 87.22384480193604,
+            "sma_20": 626.8264770507812,
+            "sma_50": 626.8264770507812,
+            "ema_9": 687.3214293273904,
+            "price_vs_sma20": 12.356458299354669,
+            "price_vs_sma50": 12.356458299354669
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 27.536576765785988,
+            "trend_direction": "bearish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 704.280029296875,
+            "resistance_1": 708.7766927083333,
+            "resistance_2": 713.2733561197916,
+            "support_1": 695.7166951497395,
+            "support_2": 687.1533610026041,
+            "nearest_resistance": 708.7766927083333,
+            "nearest_support": 695.7166951497395
+          },
+          "indicators": {
+            "rsi": 33.797110590861124,
+            "macd": 8.655876333342917,
+            "macd_signal": 14.433324049639577,
+            "macd_histogram": -5.77744771629666,
+            "stoch_k": 22.45334201388889,
+            "stoch_d": 12.801513449156287,
+            "sma_20": 715.3915008544922,
+            "sma_50": 680.9137036132812,
+            "ema_9": 711.1144785542808,
+            "price_vs_sma20": -1.5532015049584988,
+            "price_vs_sma50": 3.4316133688601007
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 27.31299444161717,
+            "trend_direction": "bearish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 704.0900268554688,
+            "resistance_1": 706.5266927083333,
+            "resistance_2": 708.9633585611979,
+            "support_1": 699.836690266927,
+            "support_2": 695.5833536783854,
+            "nearest_resistance": 706.5266927083333,
+            "nearest_support": 699.836690266927
+          },
+          "indicators": {
+            "rsi": 25.935941589468754,
+            "macd": -3.460324615870036,
+            "macd_signal": -0.5330972824414564,
+            "macd_histogram": -2.927227333428579,
+            "stoch_k": 28.176738296154568,
+            "stoch_d": 18.428522885324288,
+            "sma_20": 716.4056427001954,
+            "sma_50": 716.4056427001954,
+            "ema_9": 706.6872403930597,
+            "price_vs_sma20": -1.719084148794247,
+            "price_vs_sma50": -1.719084148794247
+          }
+        },
+        "alignment": {
+          "alignment_score": 3,
+          "alignment_percentage": 33.33333333333333,
+          "is_aligned": false,
+          "signals": {
+            "weekly_trend": "bullish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bearish",
+            "daily_momentum": "bearish",
+            "daily_ma": "below",
+            "4hour_trend": "bearish",
+            "4hour_momentum": "bearish",
+            "4hour_ma": "below"
+          },
+          "recommendation": "HOLD"
+        },
+        "entry_timing": {
+          "daily_trend": "bearish",
+          "daily_strength": "strong",
+          "4h_rsi": 25.935941589468754,
+          "4h_stoch": 28.176738296154568,
+          "entry_quality": "oversold_wait"
+        },
+        "symbol": "META",
+        "analysis_time": "2025-07-20 01:27:51"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "12768400",
+          "avg_volume": 12190800.0,
+          "relative_volume": 1.0473799914689765,
+          "is_high_volume": "False",
+          "volume_rank": 60.0
+        },
+        "obv": {
+          "obv": "211210200",
+          "obv_sma": 225019570.0,
+          "obv_trend": "up",
+          "price_trend": "up",
+          "divergence": null,
+          "obv_signal": "bearish"
+        },
+        "vwap": {
+          "vwap": 629.4185614958625,
+          "vwap_upper": 813.6768168625825,
+          "vwap_lower": 445.16030612914244,
+          "price_vs_vwap": 11.893749625543036,
+          "vwap_signal": "bullish"
+        },
+        "mfi": {
+          "mfi": 29.21517724594709,
+          "mfi_signal": "bearish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 66849623.75338149,
+          "ad_sma": 67331308.27364925,
+          "ad_trend": "distribution",
+          "ad_divergence": null
+        },
+        "volume_score": 35,
+        "volume_signal": "bearish"
+      },
+      "error": "'historical_data'"
+    },
+    {
+      "symbol": "TSLA",
+      "timestamp": "2025-07-20 01:27:51",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "TSLA",
+        "liquidity": {
+          "avg_volume": 100861610.0,
+          "avg_dollar_volume": 33249029120.889587,
+          "current_price": 329.6499938964844,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": true,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": false,
+          "trend_score": 75,
+          "performance_5d": 5.148155921058267,
+          "performance_20d": 2.35988399055656,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 2.35988399055656,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 0.9715675025426345,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 12.406428745814733,
+          "atr_pct": 3.7635155393664466,
+          "annualized_volatility": 76.09319085249659,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 52.5970618337774,
+          "roc_10": 4.5346400875840445,
+          "price_position": 59.4445154464964,
+          "rsi_status": "neutral",
+          "momentum_favorable": "True",
+          "passes_filter": "True"
+        },
+        "patterns": {
+          "patterns_detected": [
+            "pullback_to_support",
+            "flag_pattern"
+          ],
+          "pattern_count": 2,
+          "has_bullish_pattern": true,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 80,
+          "max_score": 100,
+          "filter_percentage": 80.0,
+          "passes_all_critical": true,
+          "recommendation": "EXCELLENT"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bearish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 329.6499938964844,
+            "resistance_1": 336.86665852864587,
+            "resistance_2": 344.0833231608073,
+            "support_1": 316.4666646321615,
+            "support_2": 303.28333536783856,
+            "nearest_resistance": 336.86665852864587,
+            "nearest_support": 316.4666646321615
+          },
+          "indicators": {
+            "rsi": 65.48782602924422,
+            "macd": -6.698817908090689,
+            "macd_signal": -13.358887765400091,
+            "macd_histogram": 6.660069857309402,
+            "stoch_k": 73.7372356890151,
+            "stoch_d": 68.09965439721552,
+            "sma_20": 294.44850158691406,
+            "sma_50": 294.44850158691406,
+            "ema_9": 318.337561443218,
+            "price_vs_sma20": 11.955059074797052,
+            "price_vs_sma50": 11.955059074797052
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 22.163116636948164,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 329.6499938964844,
+            "resistance_1": 333.2266540527344,
+            "resistance_2": 336.8033142089844,
+            "support_1": 323.7466735839844,
+            "support_2": 317.8433532714844,
+            "nearest_resistance": 333.2266540527344,
+            "nearest_support": 323.7466735839844
+          },
+          "indicators": {
+            "rsi": 52.5970618337774,
+            "macd": -0.11470824043925631,
+            "macd_signal": -1.758870988972479,
+            "macd_histogram": 1.6441627485332226,
+            "stoch_k": 97.03299346041625,
+            "stoch_d": 83.4571438360353,
+            "sma_20": 317.3529998779297,
+            "sma_50": 323.93559997558594,
+            "ema_9": 317.31788378882715,
+            "price_vs_sma20": 3.8748630147768437,
+            "price_vs_sma50": 1.7640524602202126
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 24.66431582975129,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 329.54998779296875,
+            "resistance_1": 332.01995849609375,
+            "resistance_2": 334.48992919921875,
+            "support_1": 325.9600524902344,
+            "support_2": 322.3701171875,
+            "nearest_resistance": 332.01995849609375,
+            "nearest_support": 325.9600524902344
+          },
+          "indicators": {
+            "rsi": 83.06872702945614,
+            "macd": 2.6922231677110062,
+            "macd_signal": -0.0369170495658384,
+            "macd_histogram": 2.7291402172768446,
+            "stoch_k": 95.6310473457109,
+            "stoch_d": 90.75825681820963,
+            "sma_20": 310.58994445800784,
+            "sma_50": 310.58994445800784,
+            "ema_9": 320.98069551902967,
+            "price_vs_sma20": 6.104525813946413,
+            "price_vs_sma50": 6.104525813946413
+          }
+        },
+        "alignment": {
+          "alignment_score": 8,
+          "alignment_percentage": 88.88888888888889,
+          "is_aligned": true,
+          "signals": {
+            "weekly_trend": "bearish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bullish",
+            "daily_momentum": "bullish",
+            "daily_ma": "above",
+            "4hour_trend": "bullish",
+            "4hour_momentum": "bullish",
+            "4hour_ma": "above"
+          },
+          "recommendation": "STRONG_BUY"
+        },
+        "entry_timing": {
+          "daily_trend": "bullish",
+          "daily_strength": "weak",
+          "4h_rsi": 83.06872702945614,
+          "4h_stoch": 95.6310473457109,
+          "entry_quality": "poor"
+        },
+        "symbol": "TSLA",
+        "analysis_time": "2025-07-20 01:27:52"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "94010900",
+          "avg_volume": 100861610.0,
+          "relative_volume": 0.9320781216956581,
+          "is_high_volume": "False",
+          "volume_rank": 45.0
+        },
+        "obv": {
+          "obv": "59702500",
+          "obv_sma": -84567730.0,
+          "obv_trend": "down",
+          "price_trend": "up",
+          "divergence": "bearish_divergence",
+          "obv_signal": "bullish"
+        },
+        "vwap": {
+          "vwap": 299.70495974424307,
+          "vwap_upper": 350.2033948171526,
+          "vwap_lower": 249.2065246713335,
+          "price_vs_vwap": 9.99150437076359,
+          "vwap_signal": "bullish"
+        },
+        "mfi": {
+          "mfi": 62.3113345679793,
+          "mfi_signal": "bullish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 453864918.43319726,
+          "ad_sma": 369609479.5927614,
+          "ad_trend": "accumulation",
+          "ad_divergence": null
+        },
+        "volume_score": 75,
+        "volume_signal": "strong_bullish"
+      },
+      "error": "'historical_data'"
+    },
+    {
+      "symbol": "BRK-B",
+      "timestamp": "2025-07-20 01:27:52",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "BRK-B",
+        "liquidity": {
+          "avg_volume": 4728045.0,
+          "avg_dollar_volume": 2240147663.284607,
+          "current_price": 473.79998779296875,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": false,
+          "above_sma50": false,
+          "above_sma200": false,
+          "ma_aligned": false,
+          "trend_score": 0,
+          "performance_5d": -0.432899933175057,
+          "performance_20d": -2.3374750614390023,
+          "trend_strength": "weak",
+          "passes_filter": false
+        },
+        "relative_strength": {
+          "stock_return_20d": -2.3374750614390023,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 0.9269816626142265,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 6.100003923688616,
+          "atr_pct": 1.2874639258863951,
+          "annualized_volatility": 22.57594991495836,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 35.11276217224167,
+          "roc_10": -2.309280867429124,
+          "price_position": 20.438666151447936,
+          "rsi_status": "neutral",
+          "momentum_favorable": "True",
+          "passes_filter": "True"
+        },
+        "patterns": {
+          "patterns_detected": [],
+          "pattern_count": 0,
+          "has_bullish_pattern": false,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 50,
+          "max_score": 100,
+          "filter_percentage": 50.0,
+          "passes_all_critical": false,
+          "recommendation": "POOR"
+        },
+        "passes_filters": false
+      },
+      "reason": "Failed entry filters"
+    },
+    {
+      "symbol": "JPM",
+      "timestamp": "2025-07-20 01:27:52",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "JPM",
+        "liquidity": {
+          "avg_volume": 10267230.0,
+          "avg_dollar_volume": 2990535969.3008423,
+          "current_price": 291.2699890136719,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": true,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": true,
+          "trend_score": 100,
+          "performance_5d": 1.5373366406278923,
+          "performance_20d": 6.830641767255274,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 6.830641767255274,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 1.014002515149536,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 5.749049772099718,
+          "atr_pct": 1.9737872039504434,
+          "annualized_volatility": 29.313949756496648,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 56.852753913981545,
+          "roc_10": -1.5979766845703125,
+          "price_position": 79.956723308539,
+          "rsi_status": "neutral",
+          "momentum_favorable": "True",
+          "passes_filter": "True"
+        },
+        "patterns": {
+          "patterns_detected": [
+            "pullback_to_support",
+            "flag_pattern"
+          ],
+          "pattern_count": 2,
+          "has_bullish_pattern": true,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 80,
+          "max_score": 100,
+          "filter_percentage": 80.0,
+          "passes_all_critical": true,
+          "recommendation": "EXCELLENT"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 291.2699890136719,
+            "resistance_1": 294.84332275390625,
+            "resistance_2": 298.4166564941406,
+            "support_1": 285.35333251953125,
+            "support_2": 279.4366760253906,
+            "nearest_resistance": 294.84332275390625,
+            "nearest_support": 285.35333251953125
+          },
+          "indicators": {
+            "rsi": 79.49633794822276,
+            "macd": 8.860736117710928,
+            "macd_signal": 3.761811922836183,
+            "macd_histogram": 5.098924194874746,
+            "stoch_k": 93.2612763371614,
+            "stoch_d": 94.38609881686573,
+            "sma_20": 255.8472137451172,
+            "sma_50": 255.8472137451172,
+            "ema_9": 277.68175055723896,
+            "price_vs_sma20": 13.845284750235326,
+            "price_vs_sma50": 13.845284750235326
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 41.51923319672623,
+            "trend_direction": "bullish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 291.2699890136719,
+            "resistance_1": 293.10332234700525,
+            "resistance_2": 294.93665568033856,
+            "support_1": 288.83333333333337,
+            "support_2": 286.3966776529948,
+            "nearest_resistance": 293.10332234700525,
+            "nearest_support": 288.83333333333337
+          },
+          "indicators": {
+            "rsi": 56.852753913981545,
+            "macd": 5.320419010249168,
+            "macd_signal": 6.069645807364899,
+            "macd_histogram": -0.7492267971157309,
+            "stoch_k": 68.11680515593557,
+            "stoch_d": 53.98799148517018,
+            "sma_20": 286.2831741333008,
+            "sma_50": 272.21691131591797,
+            "ema_9": 288.07924283402025,
+            "price_vs_sma20": 1.7419168609780336,
+            "price_vs_sma50": 6.999226317589832
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 17.868223968431685,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 291.1650085449219,
+            "resistance_1": 292.1730041503906,
+            "resistance_2": 293.1809997558594,
+            "support_1": 290.4840087890625,
+            "support_2": 289.8030090332031,
+            "nearest_resistance": 292.1730041503906,
+            "nearest_support": 290.4840087890625
+          },
+          "indicators": {
+            "rsi": 71.92986791340074,
+            "macd": 1.3237696346353118,
+            "macd_signal": 1.103876654084977,
+            "macd_histogram": 0.2198929805503349,
+            "stoch_k": 85.94745836759868,
+            "stoch_d": 86.55176946736391,
+            "sma_20": 287.21824645996094,
+            "sma_50": 287.21824645996094,
+            "ema_9": 288.8555094988765,
+            "price_vs_sma20": 1.3741334798905709,
+            "price_vs_sma50": 1.3741334798905709
+          }
+        },
+        "alignment": {
+          "alignment_score": 8,
+          "alignment_percentage": 88.88888888888889,
+          "is_aligned": true,
+          "signals": {
+            "weekly_trend": "bullish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bullish",
+            "daily_momentum": "neutral",
+            "daily_ma": "above",
+            "4hour_trend": "bullish",
+            "4hour_momentum": "bullish",
+            "4hour_ma": "above"
+          },
+          "recommendation": "STRONG_BUY"
+        },
+        "entry_timing": {
+          "daily_trend": "bullish",
+          "daily_strength": "strong",
+          "4h_rsi": 71.92986791340074,
+          "4h_stoch": 85.94745836759868,
+          "entry_quality": "overbought_wait"
+        },
+        "symbol": "JPM",
+        "analysis_time": "2025-07-20 01:27:53"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "12215700",
+          "avg_volume": 10267230.0,
+          "relative_volume": 1.189775625947797,
+          "is_high_volume": "False",
+          "volume_rank": 70.0
+        },
+        "obv": {
+          "obv": "102312300",
+          "obv_sma": 94192080.0,
+          "obv_trend": "up",
+          "price_trend": "up",
+          "divergence": null,
+          "obv_signal": "bullish"
+        },
+        "vwap": {
+          "vwap": 253.55711309195803,
+          "vwap_upper": 324.16456383111927,
+          "vwap_lower": 182.9496623527968,
+          "price_vs_vwap": 14.873523152961774,
+          "vwap_signal": "bullish"
+        },
+        "mfi": {
+          "mfi": 63.806857101774625,
+          "mfi_signal": "bullish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 94500210.91000074,
+          "ad_sma": 85362318.96570294,
+          "ad_trend": "accumulation",
+          "ad_divergence": null
+        },
+        "volume_score": 95,
+        "volume_signal": "strong_bullish"
+      },
+      "error": "'historical_data'"
+    },
+    {
+      "symbol": "JNJ",
+      "timestamp": "2025-07-20 01:27:53",
+      "passes_filters": false,
+      "signal": "NO_TRADE",
+      "score": 0,
+      "filters": {
+        "symbol": "JNJ",
+        "liquidity": {
+          "avg_volume": 9328740.0,
+          "avg_dollar_volume": 1527114709.5309448,
+          "current_price": 163.6999969482422,
+          "passes_volume": "True",
+          "passes_price": "True",
+          "passes_dollar_volume": "True",
+          "liquidity_score": 100,
+          "passes_filter": true
+        },
+        "trend": {
+          "above_sma20": true,
+          "above_sma50": true,
+          "above_sma200": true,
+          "ma_aligned": true,
+          "trend_score": 100,
+          "performance_5d": 4.333972795591153,
+          "performance_20d": 8.604791075658106,
+          "trend_strength": "strong",
+          "passes_filter": true
+        },
+        "relative_strength": {
+          "stock_return_20d": 8.604791075658106,
+          "market_return_20d": 5.355401166338187,
+          "rs_vs_market": 1.0308421767972737,
+          "outperforming_market": "False",
+          "rs_vs_sector": 1.0,
+          "outperforming_sector": true,
+          "passes_filter": "False"
+        },
+        "volatility": {
+          "atr": 2.8949988228934154,
+          "atr_pct": 1.7684782387679219,
+          "annualized_volatility": 23.22141450988571,
+          "volatility_suitable": "True",
+          "passes_filter": "True"
+        },
+        "momentum": {
+          "rsi": 75.50835648354042,
+          "roc_10": 4.929172945435425,
+          "price_position": 85.83139397242162,
+          "rsi_status": "overbought",
+          "momentum_favorable": "False",
+          "passes_filter": "False"
+        },
+        "patterns": {
+          "patterns_detected": [
+            "higher_lows"
+          ],
+          "pattern_count": 1,
+          "has_bullish_pattern": true,
+          "passes_filter": true
+        },
+        "overall": {
+          "filter_score": 65,
+          "max_score": 100,
+          "filter_percentage": 65.0,
+          "passes_all_critical": true,
+          "recommendation": "FAIR"
+        },
+        "passes_filters": true
+      },
+      "multi_timeframe": {
+        "weekly": {
+          "trend": {
+            "adx": NaN,
+            "trend_direction": "bearish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 163.6999969482422,
+            "resistance_1": 168.27999369303387,
+            "resistance_2": 172.85999043782553,
+            "support_1": 156.96000162760419,
+            "support_2": 150.22000630696616,
+            "nearest_resistance": 168.27999369303387,
+            "nearest_support": 156.96000162760419
+          },
+          "indicators": {
+            "rsi": 65.37921890186968,
+            "macd": 1.7885356072235368,
+            "macd_signal": 1.443947696878028,
+            "macd_histogram": 0.34458791034550873,
+            "stoch_k": 88.60750072554814,
+            "stoch_d": 79.7721056773771,
+            "sma_20": 155.86243133544923,
+            "sma_50": 155.86243133544923,
+            "ema_9": 156.30934930329258,
+            "price_vs_sma20": 5.0285149189831655,
+            "price_vs_sma50": 5.0285149189831655
+          }
+        },
+        "daily": {
+          "trend": {
+            "adx": 14.944003174660946,
+            "trend_direction": "bullish",
+            "trend_strength": "weak"
+          },
+          "support_resistance": {
+            "current_price": 163.6999969482422,
+            "resistance_1": 164.74666849772137,
+            "resistance_2": 165.79334004720053,
+            "support_1": 163.0066630045573,
+            "support_2": 162.3133290608724,
+            "nearest_resistance": 164.74666849772137,
+            "nearest_support": 163.0066630045573
+          },
+          "indicators": {
+            "rsi": 75.50835648354042,
+            "macd": 2.18466328052736,
+            "macd_signal": 1.2307982536094324,
+            "macd_histogram": 0.9538650269179276,
+            "stoch_k": 83.42465968175998,
+            "stoch_d": 84.59181674683275,
+            "sma_20": 155.78099899291993,
+            "sma_50": 154.11886779785155,
+            "ema_9": 159.69585523041232,
+            "price_vs_sma20": 5.083417108964722,
+            "price_vs_sma50": 6.21671394767682
+          }
+        },
+        "4hour": {
+          "trend": {
+            "adx": 47.23651666242074,
+            "trend_direction": "bullish",
+            "trend_strength": "strong"
+          },
+          "support_resistance": {
+            "current_price": 163.69500732421875,
+            "resistance_1": 164.3300018310547,
+            "resistance_2": 164.96499633789062,
+            "support_1": 163.2100067138672,
+            "support_2": 162.72500610351562,
+            "nearest_resistance": 164.3300018310547,
+            "nearest_support": 163.2100067138672
+          },
+          "indicators": {
+            "rsi": 68.70678473425181,
+            "macd": 2.674141112075091,
+            "macd_signal": 2.102677853496355,
+            "macd_histogram": 0.5714632585787363,
+            "stoch_k": 78.57783133634464,
+            "stoch_d": 77.75445823397814,
+            "sma_20": 158.46052017211915,
+            "sma_50": 158.46052017211915,
+            "ema_9": 161.74927628113713,
+            "price_vs_sma20": 3.3033383623970978,
+            "price_vs_sma50": 3.3033383623970978
+          }
+        },
+        "alignment": {
+          "alignment_score": 8,
+          "alignment_percentage": 88.88888888888889,
+          "is_aligned": true,
+          "signals": {
+            "weekly_trend": "bearish",
+            "weekly_momentum": "bullish",
+            "weekly_ma": "above",
+            "daily_trend": "bullish",
+            "daily_momentum": "bullish",
+            "daily_ma": "above",
+            "4hour_trend": "bullish",
+            "4hour_momentum": "bullish",
+            "4hour_ma": "above"
+          },
+          "recommendation": "STRONG_BUY"
+        },
+        "entry_timing": {
+          "daily_trend": "bullish",
+          "daily_strength": "weak",
+          "4h_rsi": 68.70678473425181,
+          "4h_stoch": 78.57783133634464,
+          "entry_quality": "poor"
+        },
+        "symbol": "JNJ",
+        "analysis_time": "2025-07-20 01:27:54"
+      },
+      "volume": {
+        "relative_volume": {
+          "current_volume": "9792600",
+          "avg_volume": 9328740.0,
+          "relative_volume": 1.0497237569060773,
+          "is_high_volume": "False",
+          "volume_rank": 65.0
+        },
+        "obv": {
+          "obv": "159787200",
+          "obv_sma": 152988410.0,
+          "obv_trend": "up",
+          "price_trend": "up",
+          "divergence": null,
+          "obv_signal": "bullish"
+        },
+        "vwap": {
+          "vwap": 154.98501527384846,
+          "vwap_upper": 164.60084711834088,
+          "vwap_lower": 145.36918342935604,
+          "price_vs_vwap": 5.6231124402542525,
+          "vwap_signal": "bullish"
+        },
+        "mfi": {
+          "mfi": 73.65780083063882,
+          "mfi_signal": "bullish"
+        },
+        "patterns": [],
+        "ad": {
+          "ad_line": 129417031.26459464,
+          "ad_sma": 127710200.3888003,
+          "ad_trend": "accumulation",
+          "ad_divergence": null
+        },
+        "volume_score": 95,
+        "volume_signal": "strong_bullish"
+      },
+      "error": "'historical_data'"
+    }
+  ],
+  "top_trades": []
+}

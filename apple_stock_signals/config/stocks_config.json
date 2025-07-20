@@ -1,0 +1,162 @@
+{
+  "stock_lists": {
+    "top_5": {
+      "name": "Top 5 Tech Stocks",
+      "symbols": [
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "TSLA",
+        "UNH"
+      ],
+      "active": true
+    },
+    "top_10": {
+      "name": "Top 10 US Stocks",
+      "symbols": [
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "AMZN",
+        "NVDA",
+        "META",
+        "TSLA",
+        "BRK-B",
+        "JPM",
+        "JNJ"
+      ],
+      "active": false
+    },
+    "top_50": {
+      "name": "Top 50 US Stocks by Market Cap",
+      "symbols": [
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "AMZN",
+        "NVDA",
+        "META",
+        "TSLA",
+        "BRK-B",
+        "JPM",
+        "JNJ",
+        "V",
+        "WMT",
+        "PG",
+        "MA",
+        "UNH",
+        "HD",
+        "DIS",
+        "BAC",
+        "XOM",
+        "ADBE",
+        "NFLX",
+        "CRM",
+        "CVX",
+        "ABBV",
+        "KO",
+        "PEP",
+        "TMO",
+        "COST",
+        "CSCO",
+        "MRK",
+        "ACN",
+        "LLY",
+        "AVGO",
+        "DHR",
+        "VZ",
+        "CMCSA",
+        "ABT",
+        "WFC",
+        "INTC",
+        "TXN",
+        "PFE",
+        "PM",
+        "NEE",
+        "RTX",
+        "HON",
+        "UNP",
+        "QCOM",
+        "BMY",
+        "UPS",
+        "AMGN"
+      ],
+      "active": false
+    },
+    "tech_sector": {
+      "name": "Technology Sector Focus",
+      "symbols": [
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "NVDA",
+        "META",
+        "ADBE",
+        "CRM",
+        "INTC",
+        "CSCO",
+        "QCOM",
+        "TXN",
+        "AVGO"
+      ],
+      "active": false
+    },
+    "healthcare_sector": {
+      "name": "Healthcare Sector Focus",
+      "symbols": [
+        "JNJ",
+        "UNH",
+        "PFE",
+        "ABBV",
+        "TMO",
+        "ABT",
+        "MRK",
+        "LLY",
+        "BMY",
+        "AMGN",
+        "DHR"
+      ],
+      "active": false
+    },
+    "custom": {
+      "name": "Custom Stock List",
+      "symbols": [],
+      "active": false
+    }
+  },
+  "analysis_settings": {
+    "historical_data_years": 2,
+    "backtest_period_days": 365,
+    "ml_training_samples": 200,
+    "technical_indicators": [
+      "RSI",
+      "MACD",
+      "SMA",
+      "EMA",
+      "Bollinger_Bands",
+      "ATR",
+      "Stochastic"
+    ],
+    "position_sizing": {
+      "max_position_pct": 10,
+      "risk_per_trade_pct": 2,
+      "portfolio_size": 10000
+    }
+  },
+  "pipeline_settings": {
+    "parallel_workers": 10,
+    "retry_failed_fetches": true,
+    "save_intermediate_results": true,
+    "generate_reports": true,
+    "run_ml_training": true,
+    "run_backtesting": true,
+    "run_paper_trading": true,
+    "send_notifications": false
+  },
+  "output_settings": {
+    "save_csv": true,
+    "save_json": true,
+    "generate_plots": false,
+    "compress_old_data": false
+  }
+}

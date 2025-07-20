@@ -1,0 +1,201 @@
+{
+  "analysis_date": "2025-07-19",
+  "analysis_time": "09:58:52",
+  "stocks": {
+    "AAPL": {
+      "company_name": "Apple Inc.",
+      "current_price": 211.18,
+      "change": 1.16,
+      "change_percent": 0.55,
+      "signal": "STRONG_BUY",
+      "score": 70,
+      "entry_price": 211.18,
+      "stop_loss": 207.96,
+      "take_profit_1": 219.32,
+      "take_profit_2": 227.46,
+      "take_profit_3": 235.6,
+      "risk_reward_ratios": {
+        "tp1": 2.52,
+        "tp2": 5.05,
+        "tp3": 7.57
+      },
+      "position_sizing": {
+        "shares_to_buy": 62,
+        "position_value": 13093.16,
+        "position_risk_dollars": 200.0,
+        "position_risk_percent": 2.0
+      },
+      "technical_indicators": {
+        "RSI": 70.07,
+        "MACD": 2.217,
+        "SMA_20": 207.46,
+        "SMA_50": 204.34
+      },
+      "support_resistance": {
+        "pivot": 210.89,
+        "resistance_1": 212.08,
+        "resistance_2": 212.98,
+        "resistance_3": 214.17,
+        "support_1": 209.99,
+        "support_2": 208.8,
+        "support_3": 207.9
+      }
+    },
+    "GOOGL": {
+      "company_name": "Alphabet Inc.",
+      "current_price": 185.06,
+      "change": 1.48,
+      "change_percent": 0.81,
+      "signal": "STRONG_BUY",
+      "score": 70,
+      "entry_price": 185.06,
+      "stop_loss": 181.72,
+      "take_profit_1": 193.04,
+      "take_profit_2": 201.02,
+      "take_profit_3": 209.0,
+      "risk_reward_ratios": {
+        "tp1": 2.39,
+        "tp2": 4.77,
+        "tp3": 7.16
+      },
+      "position_sizing": {
+        "shares_to_buy": 59,
+        "position_value": 10918.54,
+        "position_risk_dollars": 200.0,
+        "position_risk_percent": 2.0
+      },
+      "technical_indicators": {
+        "RSI": 64.67,
+        "MACD": 3.21,
+        "SMA_20": 176.62,
+        "SMA_50": 171.61
+      },
+      "support_resistance": {
+        "pivot": 185.06,
+        "resistance_1": 186.42,
+        "resistance_2": 187.77,
+        "resistance_3": 189.13,
+        "support_1": 183.71,
+        "support_2": 182.35,
+        "support_3": 181.0
+      }
+    },
+    "TSLA": {
+      "company_name": "Tesla Inc.",
+      "current_price": 329.65,
+      "change": 10.24,
+      "change_percent": 3.21,
+      "signal": "BUY",
+      "score": 60,
+      "entry_price": 329.65,
+      "stop_loss": 317.54,
+      "take_profit_1": 354.47,
+      "take_profit_2": 379.29,
+      "take_profit_3": 404.11,
+      "risk_reward_ratios": {
+        "tp1": 2.05,
+        "tp2": 4.1,
+        "tp3": 6.15
+      },
+      "position_sizing": {
+        "shares_to_buy": 16,
+        "position_value": 5274.4,
+        "position_risk_dollars": 200.0,
+        "position_risk_percent": 2.0
+      },
+      "technical_indicators": {
+        "RSI": 52.6,
+        "MACD": -0.874,
+        "SMA_20": 317.35,
+        "SMA_50": 323.94
+      },
+      "support_resistance": {
+        "pivot": 327.32,
+        "resistance_1": 333.23,
+        "resistance_2": 336.8,
+        "resistance_3": 342.71,
+        "support_1": 323.75,
+        "support_2": 317.84,
+        "support_3": 314.27
+      }
+    },
+    "MSFT": {
+      "company_name": "Microsoft Corporation",
+      "current_price": 510.05,
+      "change": -1.65,
+      "change_percent": -0.32,
+      "signal": "SELL",
+      "score": 35,
+      "entry_price": 510.05,
+      "stop_loss": 517.07,
+      "take_profit_1": 497.71,
+      "take_profit_2": 485.37,
+      "take_profit_3": 473.03,
+      "risk_reward_ratios": {
+        "tp1": 1.76,
+        "tp2": 3.52,
+        "tp3": 5.28
+      },
+      "position_sizing": {
+        "shares_to_buy": 28,
+        "position_value": 14281.4,
+        "position_risk_dollars": 200.0,
+        "position_risk_percent": 2.0
+      },
+      "technical_indicators": {
+        "RSI": 67.84,
+        "MACD": 9.537,
+        "SMA_20": 497.87,
+        "SMA_50": 475.35
+      },
+      "support_resistance": {
+        "pivot": 510.71,
+        "resistance_1": 513.98,
+        "resistance_2": 517.92,
+        "resistance_3": 521.19,
+        "support_1": 506.77,
+        "support_2": 503.5,
+        "support_3": 499.56
+      }
+    },
+    "UNH": {
+      "company_name": "UnitedHealth Group Inc.",
+      "current_price": 282.65,
+      "change": -5.42,
+      "change_percent": -1.88,
+      "signal": "HOLD",
+      "score": 45,
+      "entry_price": 282.65,
+      "stop_loss": 265.83,
+      "take_profit_1": 299.47,
+      "take_profit_2": 316.29,
+      "take_profit_3": 333.11,
+      "risk_reward_ratios": {
+        "tp1": 1.0,
+        "tp2": 2.0,
+        "tp3": 3.0
+      },
+      "position_sizing": {
+        "shares_to_buy": 11,
+        "position_value": 3109.15,
+        "position_risk_dollars": 200.0,
+        "position_risk_percent": 2.0
+      },
+      "technical_indicators": {
+        "RSI": 33.71,
+        "MACD": -5.815,
+        "SMA_20": 302.49,
+        "SMA_50": 308.32
+      },
+      "support_resistance": {
+        "pivot": 283.84,
+        "resistance_1": 286.88,
+        "resistance_2": 291.1,
+        "resistance_3": 294.14,
+        "support_1": 279.62,
+        "support_2": 276.58,
+        "support_3": 272.36
+      }
+    }
+  }
+}

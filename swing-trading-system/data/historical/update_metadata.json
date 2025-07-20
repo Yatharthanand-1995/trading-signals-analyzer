@@ -1,0 +1,32 @@
+{
+  "AAPL": {
+    "last_update": "2025-07-20T02:08:35.628366",
+    "last_date": "2025-07-18",
+    "total_records": 752,
+    "new_records_added": 1
+  },
+  "GOOGL": {
+    "last_update": "2025-07-20T02:08:35.789393",
+    "last_date": "2025-07-18",
+    "total_records": 752,
+    "new_records_added": 1
+  },
+  "MSFT": {
+    "last_update": "2025-07-20T02:08:35.979654",
+    "last_date": "2025-07-18",
+    "total_records": 752,
+    "new_records_added": 1
+  },
+  "TSLA": {
+    "last_update": "2025-07-20T02:08:36.137878",
+    "last_date": "2025-07-18",
+    "total_records": 752,
+    "new_records_added": 1
+  },
+  "UNH": {
+    "last_update": "2025-07-20T02:08:36.330449",
+    "last_date": "2025-07-18",
+    "total_records": 752,
+    "new_records_added": 1
+  }
+}
